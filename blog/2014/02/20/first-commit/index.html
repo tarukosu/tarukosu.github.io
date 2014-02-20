@@ -9,8 +9,8 @@
   <meta name="author" content="tarukosu">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="なんだか最近気が緩んでいるなぁと感じていたので，
+ブログを始めてみます． 毎日更新することを目標にして，プログラミングのこと，勉強のこと，思ったことなど自由に書きつづって行こうと思います． 初回のブログはこのブログの作りかたについてです． gitで管理できて手元のエディタで編集できることから， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,7 +92,94 @@
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><p>なんだか最近気が緩んでいるなぁと感じていたので，
+ブログを始めてみます．</p>
+
+<p>毎日更新することを目標にして，プログラミングのこと，勉強のこと，思ったことなど自由に書きつづって行こうと思います．</p>
+
+<p>初回のブログはこのブログの作りかたについてです．</p>
+
+<p>gitで管理できて手元のエディタで編集できることから，
+Github と Octpress を使うことにしました．</p>
+
+<hr />
+
+<p>まずはGithub Pagesを作成しましょう．
+githubで
+<strong>your_name.github.io</strong>
+という名前のレポジトリを作成します．<br/>
+私の場合は<strong>tarukosu.github.io</strong>となります．</p>
+
+<hr />
+
+<p>つぎにoctopressをインストールします．</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>cd octopress
+</span><span class='line'>
+</span><span class='line'>gem install bundler
+</span><span class='line'>bundle install
+</span><span class='line'>
+</span><span class='line'>rake install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>rakeというのはmakeのruby版？らしいです．</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
+
+
+<p>として先程作成したGithub PagesレポジトリのURLを指定し，</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>とすると，<a href="http://user_name.github.io">http://user_name.github.io</a> で作成したブログが見れるようになります．<br/>
+始めは見れるようになるまで少し時間がかかります．</p>
+
+<p>タイトルなどの設定は<strong>_config.yml</strong>で行えます．</p>
+
+<hr />
+
+<p>記事を作成するときは以下のようにします．</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["title"]
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>すると<strong>/source</strong> 内に新しいファイルができるので，これを編集します．</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake gen_deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>とすると，commit が行われてWebページが更新されます．</p>
+
+<hr />
+
+<p>編集中の記事をプレビューするには</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>とすると <a href="http://localhost:4000">http://localhost:4000</a> でみることができます．</p>
+
+<hr />
+
+<p>あまり1日目に頑張りすぎると続かないと思うので，今日はこのあたりで終わりにします．<br/>
+それではまた</p>
 </div>
 
 
@@ -117,6 +204,12 @@
 
 <time datetime="2014-02-20T19:50:14+09:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/pc/'>PC</a>
+  
+</span>
 
 
     </p>

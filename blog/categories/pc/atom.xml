@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: PC | 東大院生プログラマの日常]]></title>
+  <link href="http://tarukosu.github.io/blog/categories/pc/atom.xml" rel="self"/>
+  <link href="http://tarukosu.github.io/"/>
+  <updated>2014-02-20T21:39:17+09:00</updated>
+  <id>http://tarukosu.github.io/</id>
+  <author>
+    <name><![CDATA[tarukosu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[First Commit]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/02/20/first-commit/"/>
+    <updated>2014-02-20T19:50:14+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/02/20/first-commit</id>
+    <content type="html"><![CDATA[<p>なんだか最近気が緩んでいるなぁと感じていたので，
+ブログを始めてみます．</p>
+
+<p>毎日更新することを目標にして，プログラミングのこと，勉強のこと，思ったことなど自由に書きつづって行こうと思います．</p>
+
+<p>初回のブログはこのブログの作りかたについてです．</p>
+
+<p>gitで管理できて手元のエディタで編集できることから，
+Github と Octpress を使うことにしました．</p>
+
+<hr />
+
+<p>まずはGithub Pagesを作成しましょう．
+githubで
+<strong>your_name.github.io</strong>
+という名前のレポジトリを作成します．<br/>
+私の場合は<strong>tarukosu.github.io</strong>となります．</p>
+
+<hr />
+
+<p>つぎにoctopressをインストールします．
+```
+git clone git://github.com/imathis/octopress.git octopress
+cd octopress</p>
+
+<p>gem install bundler
+bundle install</p>
+
+<p>rake install
+```
+rakeというのはmakeのruby版？らしいです．</p>
+
+<p><code>
+rake setup_github_pages
+</code>
+として先程作成したGithub PagesレポジトリのURLを指定し，
+<code>
+rake generate
+rake deploy
+</code>
+とすると，<a href="http://user_name.github.io">http://user_name.github.io</a> で作成したブログが見れるようになります．<br/>
+始めは見れるようになるまで少し時間がかかります．</p>
+
+<p>タイトルなどの設定は<strong>_config.yml</strong>で行えます．</p>
+
+<hr />
+
+<p>記事を作成するときは以下のようにします．
+```
+rake new_post[&ldquo;title&rdquo;]</p>
+
+<p><code>
+すると**/source** 内に新しいファイルができるので，これを編集します．
+</code>
+rake gen_deploy
+```
+とすると，commit が行われてWebページが更新されます．</p>
+
+<hr />
+
+<p>編集中の記事をプレビューするには
+<code>
+rake preview
+</code>
+とすると <a href="http://localhost:4000">http://localhost:4000</a> でみることができます．</p>
+
+<hr />
+
+<p>あまり1日目に頑張りすぎると続かないと思うので，今日はこのあたりで終わりにします．<br/>
+それではまた</p>
+]]></content>
+  </entry>
+  
+</feed>
