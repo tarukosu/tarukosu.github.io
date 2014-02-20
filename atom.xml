@@ -4,7 +4,7 @@
   <title><![CDATA[東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-02-20T22:01:02+09:00</updated>
+  <updated>2014-02-20T22:07:57+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -27,6 +27,9 @@
 
 <p>gitで管理できて手元のエディタで編集できることから，
 Github と Octpress を使うことにしました．</p>
+
+<!-- more -->
+
 
 <p>導入には<a href="http://blog.glidenote.com/blog/2011/11/07/install-octopress-on-github/">GithubとOctopressでモダンな技術系ブログを作ってみる</a>を参考にさせていただきました．</p>
 
