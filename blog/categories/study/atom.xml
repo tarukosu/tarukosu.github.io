@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Study | 東大院生プログラマの日常]]></title>
+  <link href="http://tarukosu.github.io/blog/categories/study/atom.xml" rel="self"/>
+  <link href="http://tarukosu.github.io/"/>
+  <updated>2014-02-21T23:56:51+09:00</updated>
+  <id>http://tarukosu.github.io/</id>
+  <author>
+    <name><![CDATA[tarukosu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[数学は簡単]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/02/21/math/"/>
+    <updated>2014-02-21T23:07:32+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/02/21/math</id>
+    <content type="html"><![CDATA[<p>今日は数学について話そうと思います．<br/>
+ここで言う数学は高校数学の事だと思ってください．</p>
+
+<p>私は高校時代， 数学にはかなり自信がありました． 数学オリンピックでもかなりいいところまで行きました． （入試本番はあまりうまくいかなかったのですが…）<br/>
+そこで数学の問題はどのように考えて解けばいいのか， どのように勉強すればいいのか，  など自分の経験をこのブログで伝えていきたいと思います．</p>
+
+<!-- more -->
+
+
+<hr />
+
+<p>数学の問題は<strong>簡単</strong>です． <br/>
+なぜなら数学は正解と間違いの線引きがはっきりしているからです． 論理的に誤っていれば間違い， あっていれば正解． 個人の主観は入り込みません．</p>
+
+<p>そのため， 数学において正解を見つけるために重要なポイントはたった１つ.<br/>
+<strong>間違えないこと</strong> です． <br/>
+間違えない = 正解 なのです．</p>
+
+<p>一方， 国語や英語， 社会などでは「間違っているとまでは言えないけれど正解（満点）ではない」という答えが出てきます． <br/>
+つまり正解と間違いの線引きは曖昧です． このような状態で完璧な正解を探すことはとても難しいものです．</p>
+
+<p>納得していただけたでしょうか？<br/>
+「そんなこと言われても間違ってしまうんだからしょうがない」<br/>
+「間違えないなんて難しい」<br/>
+と思われた方も多いかもしれません．</p>
+
+<p>もちろん「これで説明終わり」というわけではなく， ちゃんと間違えないためのテクニックや考え方があります．</p>
+
+<p>次回以降， 間違えないためにはどうすればいいのかということを説明していこうと思います． これを読み進めていけば数学は簡単ということを納得してもらえるのではないかと思います.</p>
+]]></content>
+  </entry>
+  
+</feed>
