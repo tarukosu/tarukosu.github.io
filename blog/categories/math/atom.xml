@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Math | 東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/blog/categories/math/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-02-22T23:39:43+09:00</updated>
+  <updated>2014-02-22T23:40:57+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -26,6 +26,9 @@
 <p><strong>上から順番に，一行ずつしっかりと確認</strong>していけばそれほど難しいことではないのです．</p>
 
 <p>例として，有名な証明「1+1=1」について見ていきます．</p>
+
+<!-- more -->
+
 
 <p><code>
 A=1 とする
