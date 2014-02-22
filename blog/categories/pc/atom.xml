@@ -4,7 +4,7 @@
   <title><![CDATA[Category: PC | 東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/blog/categories/pc/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-02-22T23:41:51+09:00</updated>
+  <updated>2014-02-23T00:19:32+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -30,7 +30,6 @@ Github と Octpress を使うことにしました．</p>
 
 <!-- more -->
 
-
 <p>導入には<a href="http://blog.glidenote.com/blog/2011/11/07/install-octopress-on-github/">GithubとOctopressでモダンな技術系ブログを作ってみる</a>を参考にさせていただきました．</p>
 
 <hr />
@@ -38,13 +37,14 @@ Github と Octpress を使うことにしました．</p>
 <p>まずはGithub Pagesを作成しましょう．
 githubで
 <strong>your_name.github.io</strong>
-という名前のレポジトリを作成します．<br/>
+という名前のレポジトリを作成します．<br />
 私の場合は<strong>tarukosu.github.io</strong>となります．</p>
 
 <hr />
 
-<p>つぎにoctopressをインストールします．
-```
+<p>つぎにoctopressをインストールします．</p>
+
+<p>```
 git clone git://github.com/imathis/octopress.git octopress
 cd octopress</p>
 
@@ -58,40 +58,43 @@ rakeというのはmakeのruby版？らしいです．</p>
 <p><code>
 rake setup_github_pages
 </code>
-として先程作成したGithub PagesレポジトリのURLを指定し，
-<code>
+として先程作成したGithub PagesレポジトリのURLを指定し，</p>
+
+<p><code>
 rake generate
 rake deploy
 </code>
-とすると，<a href="http://user_name.github.io">http://user_name.github.io</a> で作成したブログが見れるようになります．<br/>
+とすると，http://user_name.github.io で作成したブログが見れるようになります．<br />
 始めは見れるようになるまで少し時間がかかります．</p>
 
 <p>タイトルなどの設定は<strong>_config.yml</strong>で行えます．</p>
 
 <hr />
 
-<p>記事を作成するときは以下のようにします．
-```
-rake new_post[&ldquo;title&rdquo;]</p>
+<p>記事を作成するときは以下のようにします．</p>
+
+<p>```
+rake new_post[“title”]</p>
+
+<p>```
+すると<strong>/source</strong> 内に新しいファイルができるので，これを編集します．</p>
 
 <p><code>
-すると**/source** 内に新しいファイルができるので，これを編集します．
-</code>
 rake gen_deploy
-```
+</code>
 とすると，commit が行われてWebページが更新されます．</p>
 
 <hr />
+<p>編集中の記事をプレビューするには</p>
 
-<p>編集中の記事をプレビューするには
-<code>
+<p><code>
 rake preview
 </code>
-とすると <a href="http://localhost:4000">http://localhost:4000</a> でみることができます．</p>
+とすると http://localhost:4000 でみることができます．</p>
 
 <hr />
 
-<p>あまり1日目に頑張りすぎると続かないと思うので，今日はこのあたりで終わりにします．<br/>
+<p>あまり1日目に頑張りすぎると続かないと思うので，今日はこのあたりで終わりにします．<br />
 それではまた</p>
 ]]></content>
   </entry>

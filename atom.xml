@@ -4,7 +4,7 @@
   <title><![CDATA[東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-02-22T23:41:51+09:00</updated>
+  <updated>2014-02-23T00:19:32+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -18,44 +18,40 @@
     <link href="http://tarukosu.github.io/blog/2014/02/22/mistake/"/>
     <updated>2014-02-22T23:08:01+09:00</updated>
     <id>http://tarukosu.github.io/blog/2014/02/22/mistake</id>
-    <content type="html"><![CDATA[<p>数学の問題は間違えなければ正解できると言いました．</p>
+    <content type="html"><![CDATA[<p>数学の問題は間違えなければ正解できると言いました．  </p>
 
-<p>では間違えないためにはどうすればいいのでしょうか？<br/>
+<p>では間違えないためにはどうすればいいのでしょうか？<br />
 数十行にわたる解答を間違えずに書くことはとても難しく思えます．</p>
 
 <p><strong>上から順番に，一行ずつしっかりと確認</strong>していけばそれほど難しいことではないのです．</p>
 
-<p>例として，有名な証明「1+1=1」について見ていきます．</p>
-
+<p>例として，有名な証明「1+1=1」について見ていきます．
 <!-- more -->
+(もちろん間違った証明です．)</p>
 
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">A=1 とする
+</span><span class="line">両辺にAをかけて   A × A = A
+</span><span class="line">両辺から１を引いて A × A - 1 = A - 1
+</span><span class="line">因数分解して     (A + 1)(A - 1) = A - 1
+</span><span class="line">両辺をA-1で割って A + 1 = 1
+</span><span class="line">A=1を代入して    1 + 1 = 1</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>(もちろん間違った証明です．)</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>A=1 とする
-</span><span class='line'>両辺にAをかけて   A × A = A
-</span><span class='line'>両辺から１を引いて A × A - 1 = A - 1
-</span><span class='line'>因数分解して     (A + 1)(A - 1) = A - 1
-</span><span class='line'>両辺をA-1で割って A + 1 = 1
-</span><span class='line'>A=1を代入して    1 + 1 = 1</span></code></pre></td></tr></table></div></figure>
-
-
-<p>証明できてしまいました．<br/>
+<p>証明できてしまいました．<br />
 どこが間違っていたかわかりましたか？</p>
 
-<p>「全体的に間違っている」，「なんとなくおかしい」などと感じてしまってはいけません．<br/>
-数学では，&#8221;少し間違っている&#8221;ということはありえないからです．必ずどこかまでは正しくて，どこかから間違っているのです．</p>
+<p>「全体的に間違っている」，「なんとなくおかしい」などと感じてしまってはいけません．<br />
+数学では，”少し間違っている”ということはありえないからです．必ずどこかまでは正しくて，どこかから間違っているのです．</p>
 
-<p>1行目は定義なので問題ないです．<br/>
-2行目は等式の両辺に同じものをかけても等式は成り立つので正しいです．<br/>
-3行目，これも等式の両辺から同じものを引いているので成り立ちます．<br/>
-4行目は因数分解です．これも正しいです．<br/>
+<p>1行目は定義なので問題ないです．<br />
+2行目は等式の両辺に同じものをかけても等式は成り立つので正しいです．<br />
+3行目，これも等式の両辺から同じものを引いているので成り立ちます．<br />
+4行目は因数分解です．これも正しいです．<br />
 5行目は等式の両辺から同じもので割っているので正しい，といってしまいそうになりますがよく考えてください．割り算には0で割ってはいけないという条件があります．
 実はA-1=0なので，ここで0で割ってしまっていた，というわけです．</p>
 
@@ -69,8 +65,7 @@
 
 <hr />
 
-<h3>今日のポイント</h3>
-
+<h3 id="section">今日のポイント</h3>
 <p><strong>上から順番に，一行ずつしっかりと確認</strong></p>
 ]]></content>
   </entry>
@@ -80,33 +75,32 @@
     <link href="http://tarukosu.github.io/blog/2014/02/21/math/"/>
     <updated>2014-02-21T23:07:32+09:00</updated>
     <id>http://tarukosu.github.io/blog/2014/02/21/math</id>
-    <content type="html"><![CDATA[<p>今日は数学について話そうと思います．<br/>
+    <content type="html"><![CDATA[<p>今日は数学について話そうと思います．<br />
 ここで言う数学は高校数学の事だと思ってください．</p>
 
-<p>私は高校時代， 数学にはかなり自信がありました． 数学オリンピックでもかなりいいところまで行きました． （入試本番はあまりうまくいかなかったのですが…）<br/>
-そこで数学の問題はどのように考えて解けばいいのか， どのように勉強すればいいのか，  など自分の経験をこのブログで伝えていきたいと思います．</p>
+<p>私は高校時代， 数学にはかなり自信がありました． 数学オリンピックでもかなりいいところまで行きました． （入試本番はあまりうまくいかなかったのですが…）<br />
+そこで数学の問題はどのように考えて解けばいいのか， どのように勉強すればいいのか，  など自分の経験をこのブログで伝えていきたいと思います． </p>
 
 <!-- more -->
 
-
 <hr />
 
-<p>数学の問題は<strong>簡単</strong>です． <br/>
-なぜなら数学は正解と間違いの線引きがはっきりしているからです． 論理的に誤っていれば間違い， あっていれば正解． 個人の主観は入り込みません．</p>
+<p>数学の問題は<strong>簡単</strong>です． <br />
+なぜなら数学は正解と間違いの線引きがはっきりしているからです． 論理的に誤っていれば間違い， あっていれば正解． 個人の主観は入り込みません． </p>
 
-<p>そのため， 数学において正解を見つけるために重要なポイントはたった１つ.<br/>
-<strong>間違えないこと</strong> です． <br/>
-間違えない = 正解 なのです．</p>
+<p>そのため， 数学において正解を見つけるために重要なポイントはたった１つ.<br />
+<strong>間違えないこと</strong> です． <br />
+間違えない = 正解 なのです． </p>
 
-<p>一方， 国語や英語， 社会などでは「間違っているとまでは言えないけれど正解（満点）ではない」という答えが出てきます． <br/>
-つまり正解と間違いの線引きは曖昧です． このような状態で完璧な正解を探すことはとても難しいものです．</p>
+<p>一方， 国語や英語， 社会などでは「間違っているとまでは言えないけれど正解（満点）ではない」という答えが出てきます． <br />
+つまり正解と間違いの線引きは曖昧です． このような状態で完璧な正解を探すことはとても難しいものです． </p>
 
-<p>納得していただけたでしょうか？<br/>
-「そんなこと言われても間違ってしまうんだからしょうがない」<br/>
-「間違えないなんて難しい」<br/>
-と思われた方も多いかもしれません．</p>
+<p>納得していただけたでしょうか？<br />
+「そんなこと言われても間違ってしまうんだからしょうがない」<br />
+「間違えないなんて難しい」<br />
+と思われた方も多いかもしれません． </p>
 
-<p>もちろん「これで説明終わり」というわけではなく， ちゃんと間違えないためのテクニックや考え方があります．</p>
+<p>もちろん「これで説明終わり」というわけではなく， ちゃんと間違えないためのテクニックや考え方があります． </p>
 
 <p>次回以降， 間違えないためにはどうすればいいのかということを説明していこうと思います． これを読み進めていけば数学は簡単ということを納得してもらえるのではないかと思います.</p>
 ]]></content>
@@ -129,7 +123,6 @@ Github と Octpress を使うことにしました．</p>
 
 <!-- more -->
 
-
 <p>導入には<a href="http://blog.glidenote.com/blog/2011/11/07/install-octopress-on-github/">GithubとOctopressでモダンな技術系ブログを作ってみる</a>を参考にさせていただきました．</p>
 
 <hr />
@@ -137,44 +130,38 @@ Github と Octpress を使うことにしました．</p>
 <p>まずはGithub Pagesを作成しましょう．
 githubで
 <strong>your_name.github.io</strong>
-という名前のレポジトリを作成します．<br/>
+という名前のレポジトリを作成します．<br />
 私の場合は<strong>tarukosu.github.io</strong>となります．</p>
 
 <hr />
 
 <p>つぎにoctopressをインストールします．</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
-</span><span class='line'>cd octopress
-</span><span class='line'>
-</span><span class='line'>gem install bundler
-</span><span class='line'>bundle install
-</span><span class='line'>
-</span><span class='line'>rake install</span></code></pre></td></tr></table></div></figure>
-
-
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">git clone git://github.com/imathis/octopress.git octopress
+</span><span class="line">cd octopress
+</span><span class="line">
+</span><span class="line">gem install bundler
+</span><span class="line">bundle install
+</span><span class="line">
+</span><span class="line">rake install</span></code></pre></td></tr></table></div></figure></notextile></div>
 <p>rakeというのはmakeのruby版？らしいです．</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
-
-
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">rake setup_github_pages</span></code></pre></td></tr></table></div></figure></notextile></div>
 <p>として先程作成したGithub PagesレポジトリのURLを指定し，</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
-
-
-<p>とすると，<a href="http://user_name.github.io">http://user_name.github.io</a> で作成したブログが見れるようになります．<br/>
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">rake generate
+</span><span class="line">rake deploy</span></code></pre></td></tr></table></div></figure></notextile></div>
+<p>とすると，http://user_name.github.io で作成したブログが見れるようになります．<br />
 始めは見れるようになるまで少し時間がかかります．</p>
 
 <p>タイトルなどの設定は<strong>_config.yml</strong>で行えます．</p>
@@ -183,32 +170,25 @@ githubで
 
 <p>記事を作成するときは以下のようにします．</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["title"]
-</span></code></pre></td></tr></table></div></figure>
-
-
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">rake new_post["title"]
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 <p>すると<strong>/source</strong> 内に新しいファイルができるので，これを編集します．</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake gen_deploy</span></code></pre></td></tr></table></div></figure>
-
-
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">rake gen_deploy</span></code></pre></td></tr></table></div></figure></notextile></div>
 <p>とすると，commit が行われてWebページが更新されます．</p>
 
 <hr />
-
 <p>編集中の記事をプレビューするには</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
-
-
-<p>とすると <a href="http://localhost:4000">http://localhost:4000</a> でみることができます．</p>
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">rake preview</span></code></pre></td></tr></table></div></figure></notextile></div>
+<p>とすると http://localhost:4000 でみることができます．</p>
 
 <hr />
 
-<p>あまり1日目に頑張りすぎると続かないと思うので，今日はこのあたりで終わりにします．<br/>
+<p>あまり1日目に頑張りすぎると続かないと思うので，今日はこのあたりで終わりにします．<br />
 それではまた</p>
 ]]></content>
   </entry>

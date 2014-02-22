@@ -30,6 +30,37 @@
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre',
+      'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
   
   <script type="text/javascript">
@@ -104,44 +135,40 @@
   </header>
 
 
-<div class="entry-content"><p>数学の問題は間違えなければ正解できると言いました．</p>
+<div class="entry-content"><p>数学の問題は間違えなければ正解できると言いました．  </p>
 
-<p>では間違えないためにはどうすればいいのでしょうか？<br/>
+<p>では間違えないためにはどうすればいいのでしょうか？<br />
 数十行にわたる解答を間違えずに書くことはとても難しく思えます．</p>
 
 <p><strong>上から順番に，一行ずつしっかりと確認</strong>していけばそれほど難しいことではないのです．</p>
 
-<p>例として，有名な証明「1+1=1」について見ていきます．</p>
-
+<p>例として，有名な証明「1+1=1」について見ていきます．
 <!-- more -->
+(もちろん間違った証明です．)</p>
 
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">A=1 とする
+</span><span class="line">両辺にAをかけて   A × A = A
+</span><span class="line">両辺から１を引いて A × A - 1 = A - 1
+</span><span class="line">因数分解して     (A + 1)(A - 1) = A - 1
+</span><span class="line">両辺をA-1で割って A + 1 = 1
+</span><span class="line">A=1を代入して    1 + 1 = 1</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>(もちろん間違った証明です．)</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>A=1 とする
-</span><span class='line'>両辺にAをかけて   A × A = A
-</span><span class='line'>両辺から１を引いて A × A - 1 = A - 1
-</span><span class='line'>因数分解して     (A + 1)(A - 1) = A - 1
-</span><span class='line'>両辺をA-1で割って A + 1 = 1
-</span><span class='line'>A=1を代入して    1 + 1 = 1</span></code></pre></td></tr></table></div></figure>
-
-
-<p>証明できてしまいました．<br/>
+<p>証明できてしまいました．<br />
 どこが間違っていたかわかりましたか？</p>
 
-<p>「全体的に間違っている」，「なんとなくおかしい」などと感じてしまってはいけません．<br/>
-数学では，&#8221;少し間違っている&#8221;ということはありえないからです．必ずどこかまでは正しくて，どこかから間違っているのです．</p>
+<p>「全体的に間違っている」，「なんとなくおかしい」などと感じてしまってはいけません．<br />
+数学では，”少し間違っている”ということはありえないからです．必ずどこかまでは正しくて，どこかから間違っているのです．</p>
 
-<p>1行目は定義なので問題ないです．<br/>
-2行目は等式の両辺に同じものをかけても等式は成り立つので正しいです．<br/>
-3行目，これも等式の両辺から同じものを引いているので成り立ちます．<br/>
-4行目は因数分解です．これも正しいです．<br/>
+<p>1行目は定義なので問題ないです．<br />
+2行目は等式の両辺に同じものをかけても等式は成り立つので正しいです．<br />
+3行目，これも等式の両辺から同じものを引いているので成り立ちます．<br />
+4行目は因数分解です．これも正しいです．<br />
 5行目は等式の両辺から同じもので割っているので正しい，といってしまいそうになりますがよく考えてください．割り算には0で割ってはいけないという条件があります．
 実はA-1=0なので，ここで0で割ってしまっていた，というわけです．</p>
 
@@ -155,8 +182,7 @@
 
 <hr />
 
-<h3>今日のポイント</h3>
-
+<h3 id="section">今日のポイント</h3>
 <p><strong>上から順番に，一行ずつしっかりと確認</strong></p>
 </div>
 
