@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Math | 東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/blog/categories/math/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-02-22T23:40:57+09:00</updated>
+  <updated>2014-02-22T23:41:51+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -29,6 +29,8 @@
 
 <!-- more -->
 
+
+<p>(もちろん間違った証明です．)</p>
 
 <p><code>
 A=1 とする
