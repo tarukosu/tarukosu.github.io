@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Study | 東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/blog/categories/study/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-02-24T00:07:13+09:00</updated>
+  <updated>2014-02-24T21:51:09+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[証明ってなんだ？]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/02/24/proof/"/>
+    <updated>2014-02-24T21:27:50+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/02/24/proof</id>
+    <content type="html"><![CDATA[<p>「解答とは何を書くべきか？」のページで，
+解答には証明を書くべきだ，と言いました．</p>
+
+<p>じゃあ証明ってのはどう書けばいいのか？</p>
+
+<p>というのが今日の話題です．</p>
+
+<!-- more -->
+
+<p>証明において必要なことは，
+「それぞれの文章，数式が正しいことが明らかである」
+ということです．<br />
+大切なのは<strong>明らかである</strong>という部分で，単に正しいというわけではいけません．</p>
+
+<p>少し例をあげて考えてみます．</p>
+
+<hr />
+
+<p>問題
+$$
+次の式を満たすxを求めよ． \<br />
+x^2 + 3x + 2 = 0
+$$</p>
+
+<hr />
+<p>良い証明</p>
+
+<script type="math/tex; mode=display">
+x^2 + 3x + 2 = 0\\
+(x + 2)(x + 1) = 0\\
+x = -1,-2
+</script>
+
+<hr />
+<p>良くない証明</p>
+
+<script type="math/tex; mode=display">
+x^2 + 3x + 2 = 0\\
+x = -1,-2
+</script>
+
+<hr />
+
+<p>良い証明，悪い証明，両方とも解は同じです．</p>
+
+<p>ですが良くない証明の方では，$x = -1,-2$となることが明らかではありません．<br />
+良い証明の方では，$(x+2)(x+1)=0$があることにより，$x+2=0$または$x+1=0$がいえるので，$x = -1,-2$となることが明らかです．</p>
+
+<p>これはとても簡単な例ですが，どんなに複雑な問題でも正しいことが明らかであるような式や言葉を並べていくことで正しい証明というものが出来るのです．</p>
+
+<h3 id="section">今日のポイント</h3>
+<p><strong>証明とは正しいことが明らかである式や言葉の積み重ね</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[解答とは何を書くべきか？]]></title>
@@ -23,13 +83,13 @@
 <p>いきなり質問ですが，みなさん答案用紙には何を書いていますか？<br />
 何を書くべきだと思いますか？</p>
 
-<p>一番多い答えが「途中結果」という答えではないでしょうか？</p>
+<p>一番多い答えが「途中結果」ではないでしょうか？</p>
 
 <p>しかしそれは間違っていると私は思います．</p>
 
 <!-- more -->
 
-<p>私は答案用紙には自分の書いた解が正しいことを示す<strong>証明</strong>を書くべきだと思います． </p>
+<p>答案用紙には自分の書いた解が正しいことを示す<strong>証明</strong>を書くべきです．</p>
 
 <p>証明といっても難しく考える必要はありません．<br />
 一行ずつ正しいことを書いていけばそれが証明になります．<br />
@@ -50,6 +110,8 @@
 <p>逆に言うと，きちんとした証明が書かれていれば，その解にはケチのつけようがありません．<br />
 どんなに問題作成者の意図と違っていても，それは間違いなく正しい解になるのです．</p>
 
+<h3 id="section">今日のポイント</h3>
+<p><strong>解答には証明を書く</strong></p>
 ]]></content>
   </entry>
   
