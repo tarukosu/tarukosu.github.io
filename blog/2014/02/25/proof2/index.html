@@ -5,12 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>First Commit - 東大院生プログラマの日常</title>
+  <title>証明の正しい書き方 - 東大院生プログラマの日常</title>
   <meta name="author" content="tarukosu">
 
   
-  <meta name="description" content="なんだか最近気が緩んでいるなぁと感じていたので，
-ブログを始めてみます． 毎日更新することを目標にして，プログラミングのこと，勉強のこと，思ったことなど自由に書きつづって行こうと思います． 初回のブログはこのブログの作りかたについてです． gitで管理できて手元のエディタで編集できることから， &hellip;">
+  <meta name="description" content="本日は正しい証明を書くためのポイントを具体的に説明しようと思います． そのポイントとは，一言で言うと
+計算をとばして論理をとばすな
+ということです． 前半の「計算を飛ばす」という部分ですが，答案を計算用紙がわりに使ってしまっている人が多いと思います． しかし， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tarukosu.github.io/blog/2014/02/20/first-commit">
+  <link rel="canonical" href="http://tarukosu.github.io/blog/2014/02/25/proof2">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="東大院生プログラマの日常" type="application/atom+xml">
@@ -112,7 +113,7 @@
   
   <header>
     
-      <h1 class="entry-title">First Commit</h1>
+      <h1 class="entry-title">証明の正しい書き方</h1>
     
     
       <p class="meta">
@@ -128,92 +129,55 @@
   
 
 
-<time datetime="2014-02-20T19:50:14+09:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time>
+<time datetime="2014-02-25T22:11:34+09:00" pubdate data-updated="true">Feb 25<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>なんだか最近気が緩んでいるなぁと感じていたので，
-ブログを始めてみます．</p>
+<div class="entry-content"><p>本日は正しい証明を書くためのポイントを具体的に説明しようと思います．</p>
 
-<p>毎日更新することを目標にして，プログラミングのこと，勉強のこと，思ったことなど自由に書きつづって行こうと思います．</p>
-
-<p>初回のブログはこのブログの作りかたについてです．</p>
-
-<p>gitで管理できて手元のエディタで編集できることから，
-Github と Octpress を使うことにしました．</p>
+<p>そのポイントとは，一言で言うと<br />
+<strong>計算をとばして論理をとばすな</strong><br />
+ということです．</p>
 
 <!-- more -->
 
-<p>導入には<a href="http://blog.glidenote.com/blog/2011/11/07/install-octopress-on-github/">GithubとOctopressでモダンな技術系ブログを作ってみる</a>を参考にさせていただきました．</p>
+<p>前半の「計算を飛ばす」という部分ですが，答案を計算用紙がわりに使ってしまっている人が多いと思います．</p>
+
+<p>しかし，答案には当たり前の計算は書く必要はありません．計算は別のところでして，ある程度省略して書くことが望ましいです．</p>
+
+<p>ただし全部省略していいという訳ではありません．式変形において，当たり前ではない部分，というのは残す必要があります．</p>
+
+<p>下の例を見てください．</p>
+
+<script type="math/tex; mode=display"> 
+\sum_{k=1}^n{\{(k+1)^2 + k\}}\\
+=\sum_{k=1}^n{\{k^2+2k+1 + k\}}\\
+=\sum_{k=1}^n{\{k^2+3k+1 \}}\\
+=\frac{1}{6}n(n+1)(2n+1) + \frac{3}{2}n(n+1) + n\\
+=\frac{1}{6}(2n^3+3n^2+n) + \frac{3}{2}(n^2+n) + n\\
+=\frac{1}{3}n^3+2n^2+\frac{8}{3}n
+
+</script>
+
+<p>この数式で解答に書くべきなのはどの行でしょうか？<br />
+1行目から3行目への変形は展開しただけなので，当たり前の変形です．そのため2行目は省略しても問題ありません．4行目から6行目も同様です．</p>
+
+<p>それに対し，3行目から4行目へは$\Sigma$が展開されて式が大きく変わっています．そのため，この部分は省略せずに解答に書いておくべきです．</p>
 
 <hr />
 
-<p>まずはGithub Pagesを作成しましょう．
-githubで
-<strong>your_name.github.io</strong>
-という名前のレポジトリを作成します．<br />
-私の場合は<strong>tarukosu.github.io</strong>となります．</p>
+<p>続いて後半部分「論理を飛ばすな」の部分です．  </p>
 
-<hr />
+<p>よくやってしまいがちなのが，いきなり数式を書き始めてしまうことです．<br />
+そうではなくて，数式を書く前にどうしてその数式がなりたつのか，どうしてそう言えるのか，という理由を書かないといけません．  </p>
 
-<p>つぎにoctopressをインストールします．</p>
+<p>また，これをきっちり書くことで数式が本当に成り立つのか自分でも確認することができ，間違い防止につながります．</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">git clone git://github.com/imathis/octopress.git octopress
-</span><span class="line">cd octopress
-</span><span class="line">
-</span><span class="line">gem install bundler
-</span><span class="line">bundle install
-</span><span class="line">
-</span><span class="line">rake install</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>rakeというのはmakeのruby版？らしいです．</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">rake setup_github_pages</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>として先程作成したGithub PagesレポジトリのURLを指定し，</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">rake generate
-</span><span class="line">rake deploy</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>とすると，http://user_name.github.io で作成したブログが見れるようになります．<br />
-始めは見れるようになるまで少し時間がかかります．</p>
-
-<p>タイトルなどの設定は<strong>_config.yml</strong>で行えます．</p>
-
-<hr />
-
-<p>記事を作成するときは以下のようにします．</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">rake new_post["title"]
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>すると<strong>/source</strong> 内に新しいファイルができるので，これを編集します．</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">rake gen_deploy</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>とすると，commit が行われてWebページが更新されます．</p>
-
-<hr />
-<p>編集中の記事をプレビューするには</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">rake preview</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>とすると http://localhost:4000 でみることができます．</p>
-
-<hr />
-
-<p>あまり1日目に頑張りすぎると続かないと思うので，今日はこのあたりで終わりにします．<br />
-それではまた</p>
+<h3 id="section">今日のポイント</h3>
+<p><strong>計算をとばして論理をとばすな</strong>  </p>
 </div>
 
 
@@ -236,12 +200,12 @@ githubで
   
 
 
-<time datetime="2014-02-20T19:50:14+09:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time>
+<time datetime="2014-02-25T22:11:34+09:00" pubdate data-updated="true">Feb 25<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/pc/'>PC</a>
+    <a class='category' href='/blog/categories/math/'>math</a>, <a class='category' href='/blog/categories/study/'>study</a>
   
 </span>
 
@@ -250,7 +214,7 @@ githubで
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tarukosu.github.io/blog/2014/02/20/first-commit/" data-via="" data-counturl="http://tarukosu.github.io/blog/2014/02/20/first-commit/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tarukosu.github.io/blog/2014/02/25/proof2/" data-via="" data-counturl="http://tarukosu.github.io/blog/2014/02/25/proof2/" >Tweet</a>
   
   
   
@@ -261,8 +225,8 @@ githubで
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2014/02/24/proof/" title="Previous Post: 証明ってなんだ？">&laquo; 証明ってなんだ？</a>
       
-        <a class="basic-alignment right" href="/blog/2014/02/21/math/" title="Next Post: 数学は簡単">数学は簡単 &raquo;</a>
       
     </p>
   </footer>
@@ -328,8 +292,8 @@ githubで
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://tarukosu.github.io/blog/2014/02/20/first-commit/';
-        var disqus_url = 'http://tarukosu.github.io/blog/2014/02/20/first-commit/';
+        var disqus_identifier = 'http://tarukosu.github.io/blog/2014/02/25/proof2/';
+        var disqus_url = 'http://tarukosu.github.io/blog/2014/02/25/proof2/';
         var disqus_script = 'embed.js';
       
     (function () {
