@@ -4,7 +4,7 @@
   <title><![CDATA[東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-02-26T22:56:33+09:00</updated>
+  <updated>2014-02-27T22:52:46+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -12,6 +12,99 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[必要条件と十分条件]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/02/27/hitsuyo-jubun/"/>
+    <updated>2014-02-27T22:11:27+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/02/27/hitsuyo-jubun</id>
+    <content type="html"><![CDATA[<p>必要条件，十分条件は聞いたことがあるでしょうか？</p>
+
+<p>高校数学では比較的早く習う単元ですが，あまりよく理解できていない（できてなかった）人が多いような気がします．<br />
+ですが，これはこの分野の問題に対してだけではなく，あらゆる数学の問題を解く上で大変重要な概念なのでしっかり理解してほしいです．</p>
+
+<p>そのため，今日はこれらについて解説したいと思います．</p>
+
+<!-- more -->
+
+<p>定義は以下のようなものです．
+$$
+p \Rightarrow q ~~(~~ pならばq~~ ) であるとき，
+$$</p>
+
+<script type="math/tex; mode=display">
+p~は~q~であるための十分条件
+</script>
+
+<script type="math/tex; mode=display">
+q~は~p~であるための必要条件
+</script>
+
+<p>となります．<br />
+pとかqだとよくわからないな…という人は
+p に$x=1$, q に$x^2=1$を当てはめて考えてみてください．</p>
+
+<p>ですが，これをただ暗記するだけでは理解したことにはなりませんし，よく間違えてしまいます．</p>
+
+<hr />
+
+<p>このような名前がつくのにはちゃんと理由があります．</p>
+
+<p>まず，
+「pはqであるための十分条件」について見ていきます．</p>
+
+<p><strong>pはqであるための~条件</strong>というのは，いいかえれば<br />
+<strong>qが成り立つためには，pという条件はどういう役割なのか</strong>ということです．</p>
+
+<p>$$
+p \Rightarrow q
+$$
+というのはpが成り立つときqは成り立つ，という意味です．<br />
+つまりqが成り立つにはどういう条件が必要かな，と考えた時にpという条件が成り立てば十分（それさえあればqが成り立つと言えるということ）です．  </p>
+
+<p>そのため，
+$$
+p~は~q~であるための十分条件
+$$</p>
+
+<p>と呼ぶのです．</p>
+
+<hr />
+
+<p>つぎに，
+「qはpであるための必要条件」について見ていきます．</p>
+
+<p>$$
+p \Rightarrow q
+$$
+は対偶を取ると
+$$
+\overline{q} \Rightarrow \overline{p} ~~~(qでないならpでない)
+$$
+となります．</p>
+
+<p>このときpが成り立つにはどういう条件が必要かな，と考えると，
+「qでないならpでない」なので少なくともqである必要があります．  ただし「qが成り立つと必ずpが成り立つか」と言われるとそうではありません．</p>
+
+<p>つまり，pが成り立つにはqという条件は必要だけれども，それだけでいいというわけではないということです．</p>
+
+<p>そのため，
+$$
+q~は~p~であるための必要条件
+$$
+となります．</p>
+
+<hr />
+
+<p>理解できましたでしょうか？<br />
+よくわからなかった場合には，
+p に$x=1$, q に$x^2=1$を当てはめて読んでみて，なれてきたらp,qで考えてみてください．</p>
+
+<h3 id="section">今日のポイント</h3>
+<p><strong>pはqであるための~条件</strong>というのは<br />
+<strong>qが成り立つためには，pという条件はどういう役割なのか</strong>ということ</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[おすすめ勉強法（教科書の読み方）]]></title>
