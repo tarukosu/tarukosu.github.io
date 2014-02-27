@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Study | 東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/blog/categories/study/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-02-27T22:52:46+09:00</updated>
+  <updated>2014-02-28T08:49:47+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -12,6 +12,101 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[必要×十分=?]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/02/28/hitsuyo-jubun2/"/>
+    <updated>2014-02-28T07:56:04+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/02/28/hitsuyo-jubun2</id>
+    <content type="html"><![CDATA[<script type="math/tex; mode=display">
+p \Rightarrow q \\
+p \Leftarrow q
+</script>
+
+<p>が両方とも成り立つ時，
+$$
+p \iff q 
+$$</p>
+
+<p>と表わせ，<strong>pとqは同値である</strong>，または<strong>pはqであるための必要十分条件である</strong>と呼びます．</p>
+
+<p>この<strong>同値</strong>というものがどうして重要かというと，数学の解（最終的な答え）というのは基本的には問題と同値なものであるからです．</p>
+
+<hr />
+
+<p>少し具体的に見ていきます．</p>
+
+<p>簡単な例ですが，次のような問題文を考えます．
+$$
+x(x-1) = x ~~を満たすxを求めよ
+$$</p>
+
+<!-- more -->
+
+<p>誤った答え1</p>
+
+<script type="math/tex; mode=display">
+x(x-1) = x \\
+x-1 = 1 \\
+x = 2
+</script>
+
+<p>2行目の$x-1=0$というのは1行目に対する十分条件ですが必要条件ではありません．</p>
+
+<p>$$
+x(x-1) = x \Leftarrow
+x-1 = 1 
+$$
+は正しいが，</p>
+
+<p>$$
+x(x-1) = x \Rightarrow
+x-1 = 1 
+$$
+は誤り．</p>
+
+<p>このように，問題に対して十分条件（必要十分ではない）を考えてしまうと，求まった解は確かに問題の条件を満たすけれども他の解を見落としている，ということになります．</p>
+
+<hr />
+
+<p>誤った答え2</p>
+
+<script type="math/tex; mode=display">
+x(x-1) = x \\
+左辺，右辺の正負が一致するには，\\
+x-1 \ge 0 \\
+x \ge 1
+
+</script>
+
+<p>この場合は，3行目の$x-1\ge 0$というのは1行目に対する必要条件ですが十分条件ではありません．</p>
+
+<p>このように，問題に対して必要条件だけを考えてしまうと，求まった解には解が含まれているけれども絞りきれていない（解でないものも含まれている）ということになります．</p>
+
+<hr />
+
+<p>正しい解</p>
+
+<script type="math/tex; mode=display">
+x(x-1) = x \\
+x(x-2) = 0 \\
+x = 0, 2
+</script>
+
+<p>これでは，2行目，3行目ともに上の行と同値な数式です．<br />
+そのため，問題と同値な解を得ることができます．</p>
+
+<hr />
+
+<p>今回は簡単な例だったので，正しい解のように解けることが当たり前の様に感じるかもしれません．ですが，問題が少し難しくなると，気づかぬうちに必要条件のみ，または十分条件のみ，となってしまうことがあります．<br />
+$x$ が $\cos{x}$に置き換わっているだけでも，誤りは増えてしまうでしょう．</p>
+
+<p>問題を解く際には，必要条件十分条件を意識して，<strong>同値</strong>なものを求められているかに注意してください．</p>
+
+<h3 id="section">今日のポイント</h3>
+<p><strong>解と問題は同値なもの</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[必要条件と十分条件]]></title>
@@ -255,48 +350,6 @@ x = -1,-2
 
 <h3 id="section">今日のポイント</h3>
 <p><strong>証明とは正しいことが明らかである式や言葉の積み重ね</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[解答とは何を書くべきか？]]></title>
-    <link href="http://tarukosu.github.io/blog/2014/02/23/solution/"/>
-    <updated>2014-02-23T23:06:38+09:00</updated>
-    <id>http://tarukosu.github.io/blog/2014/02/23/solution</id>
-    <content type="html"><![CDATA[<p>今日も数学（高校数学）の話です．</p>
-
-<p>いきなり質問ですが，みなさん答案用紙には何を書いていますか？<br />
-何を書くべきだと思いますか？</p>
-
-<p>一番多い答えが「途中結果」ではないでしょうか？</p>
-
-<p>しかしそれは間違っていると私は思います．</p>
-
-<!-- more -->
-
-<p>答案用紙には自分の書いた解が正しいことを示す<strong>証明</strong>を書くべきです．</p>
-
-<p>証明といっても難しく考える必要はありません．<br />
-一行ずつ正しいことを書いていけばそれが証明になります．<br />
-証明の書き方について，詳しくは次回以降で説明しようと思います．</p>
-
-<hr />
-
-<p>どうして<strong>証明</strong>を書く必要があるのでしょうか？  </p>
-
-<p>数学は論理的な学問です．<br />
-解だけが重要なのではありません．<br />
-解が正しいということが示されて始めて，その解には意味があるのです．</p>
-
-<p>「途中経過を書く」ということが間違っている理由はこのためです．<br />
-どれだけ途中経過を書いても，それが数学的に正しくなければそれは意味のないものになってしまいます．<br />
-解が正しいということを示してなければ，解があっていても意味がないものとなります．</p>
-
-<p>逆に言うと，きちんとした証明が書かれていれば，その解にはケチのつけようがありません．<br />
-どんなに問題作成者の意図と違っていても，それは間違いなく正しい解になるのです．</p>
-
-<h3 id="section">今日のポイント</h3>
-<p><strong>解答には証明を書く</strong></p>
 ]]></content>
   </entry>
   
