@@ -4,7 +4,7 @@
   <title><![CDATA[東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-03-02T23:02:18+09:00</updated>
+  <updated>2014-03-03T23:24:46+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ケアレスミスの防ぎ方（反復法）]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/03/03/repeat/"/>
+    <updated>2014-03-03T23:07:22+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/03/03/repeat</id>
+    <content type="html"><![CDATA[<p>今回からは計算過程での，ケアレスミスを防ぐテクニックについて書いていきます．</p>
+
+<p>1つ目の方法は<strong>反復法</strong>です．（名前は勝手につけたものなので，覚えるようなものではないです）</p>
+
+<p>これは，1度行った計算をもう一度繰り返して一致するかどうか確かめるという方法です．  ポイントは1回目の計算をあまり見ないようにすることです．1回目の計算を見てしまうとその式に引きずられて同じように間違いやすくなるからです．</p>
+
+<hr />
+
+<p>この方法のメリット，デメリットを説明します．</p>
+
+<!-- more -->
+
+<p>メリットは，<strong>どういう場合にでも使えること</strong>です．どんな計算でもこの方法を使えます．</p>
+
+<p>デメリットは<strong>時間がかかってしまうこと</strong>と，<strong>2回とも同じように間違ってしまう可能性があること</strong>です．<br />
+同じように間違う，というのは計算ミスを2回ともしてしまうという場合に加えて，そもそも計算方法を間違えて覚えてしまっている（∑の展開，積分など）場合には間違いを見つけられません．</p>
+
+<hr />
+
+<p>デメリットはありますが，どんなときにも使える汎用的な方法なので，是非試してみてください．</p>
+
+<h3 id="section">今日のポイント</h3>
+
+<p><strong>反復法(1度行った計算をもう一度繰り返して一致するかどうか確かめる)</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ケアレスミスの防ぎ方]]></title>
