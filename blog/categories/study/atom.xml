@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Study | 東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/blog/categories/study/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-03-04T01:54:36+09:00</updated>
+  <updated>2014-03-06T22:04:09+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ケアレミスの防ぎ方（逆戻り法）]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/03/06/reverse/"/>
+    <updated>2014-03-06T21:40:24+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/03/06/reverse</id>
+    <content type="html"><![CDATA[<p>今回は計算過程でのケアレスミスを防ぐテクニックその2，<strong>逆戻り法</strong>です．</p>
+
+<p>これは，計算や式変形を行った後の式から，計算前・変形前の式に戻すことが出来るか（戻して一致するか）を確かめるという方法です．<br />
+この方法のメリット・デメリットを説明します．</p>
+
+<!-- more -->
+
+<hr />
+
+<p>メリットは，この方法が使える式であれば<strong>ほぼ確実に間違いを見つけることができる</strong>ことです．<br />
+反復法では2回とも同じ間違いをしてしまうことはしばしばありえますが，逆戻り法では行う計算が異なっているために同じ間違いは起こりにくくなります．    </p>
+
+<p>もうひとつのメリットは，<strong>計算後から計算前への変形が簡単な場合に，確かめが簡単になる</strong>ことです．<br />
+例えば，因数分解はこのような例です．</p>
+
+<script type="math/tex; mode=display">
+x^2-3x-28=0\\
+(x-7)(x+4)=0
+</script>
+
+<p>という因数分解は，</p>
+
+<script type="math/tex; mode=display">
+(x-7)(x+4)=0\\
+x^2-3x-28=0
+</script>
+
+<p>と展開することにより確かめられます．</p>
+
+<p>また，簡単な引き算も意外と間違えてしまうことがありますが，</p>
+
+<script type="math/tex; mode=display">
+144 - 76 = 68
+</script>
+
+<p>と計算した後で，</p>
+
+<script type="math/tex; mode=display">
+76 + 68 = 144
+</script>
+
+<p>として確認することができます．</p>
+
+<hr />
+
+<p>デメリットは，積分計算や∑の計算などのもとに戻すことの方が難しい計算があるということです．このような場合には，別の方法を使ったほうがよいでしょう．</p>
+
+<p>どのような場合に有効で，どのような場合に役に立たないのかは，いろいろな問題を解いていくなかで試して確かめてみてください．</p>
+
+<h3 id="section">今日のポイント</h3>
+<p><strong>逆戻り法（計算後の式から，計算前の式に戻すことが出来るか確かめる）</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ケアレスミスの防ぎ方（反復法）]]></title>
@@ -242,99 +301,6 @@ $x$ が $\cos{x}$に置き換わっているだけでも，誤りは増えてし
 
 <h3 id="section">今日のポイント</h3>
 <p><strong>解と問題は同値なもの</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[必要条件と十分条件]]></title>
-    <link href="http://tarukosu.github.io/blog/2014/02/27/hitsuyo-jubun/"/>
-    <updated>2014-02-27T22:11:27+09:00</updated>
-    <id>http://tarukosu.github.io/blog/2014/02/27/hitsuyo-jubun</id>
-    <content type="html"><![CDATA[<p>必要条件，十分条件は聞いたことがあるでしょうか？</p>
-
-<p>高校数学では比較的早く習う単元ですが，あまりよく理解できていない（できてなかった）人が多いような気がします．<br />
-ですが，これはこの分野の問題に対してだけではなく，あらゆる数学の問題を解く上で大変重要な概念なのでしっかり理解してほしいです．</p>
-
-<p>そのため，今日はこれらについて解説したいと思います．</p>
-
-<!-- more -->
-
-<p>定義は以下のようなものです．
-$$
-p \Rightarrow q ~~(~~ pならばq~~ ) であるとき，
-$$</p>
-
-<script type="math/tex; mode=display">
-p~は~q~であるための十分条件
-</script>
-
-<script type="math/tex; mode=display">
-q~は~p~であるための必要条件
-</script>
-
-<p>となります．<br />
-pとかqだとよくわからないな…という人は
-p に$x=1$, q に$x^2=1$を当てはめて考えてみてください．</p>
-
-<p>ですが，これをただ暗記するだけでは理解したことにはなりませんし，よく間違えてしまいます．</p>
-
-<hr />
-
-<p>このような名前がつくのにはちゃんと理由があります．</p>
-
-<p>まず，
-「pはqであるための十分条件」について見ていきます．</p>
-
-<p><strong>pはqであるための~条件</strong>というのは，いいかえれば<br />
-<strong>qが成り立つためには，pという条件はどういう役割なのか</strong>ということです．</p>
-
-<p>$$
-p \Rightarrow q
-$$
-というのはpが成り立つときqは成り立つ，という意味です．<br />
-つまりqが成り立つにはどういう条件が必要かな，と考えた時にpという条件が成り立てば十分（それさえあればqが成り立つと言えるということ）です．  </p>
-
-<p>そのため，
-$$
-p~は~q~であるための十分条件
-$$</p>
-
-<p>と呼ぶのです．</p>
-
-<hr />
-
-<p>つぎに，
-「qはpであるための必要条件」について見ていきます．</p>
-
-<p>$$
-p \Rightarrow q
-$$
-は対偶を取ると
-$$
-\overline{q} \Rightarrow \overline{p} ~~~(qでないならpでない)
-$$
-となります．</p>
-
-<p>このときpが成り立つにはどういう条件が必要かな，と考えると，
-「qでないならpでない」なので少なくともqである必要があります．  ただし「qが成り立つと必ずpが成り立つか」と言われるとそうではありません．</p>
-
-<p>つまり，pが成り立つにはqという条件は必要だけれども，それだけでいいというわけではないということです．</p>
-
-<p>そのため，
-$$
-q~は~p~であるための必要条件
-$$
-となります．</p>
-
-<hr />
-
-<p>理解できましたでしょうか？<br />
-よくわからなかった場合には，
-p に$x=1$, q に$x^2=1$を当てはめて読んでみて，なれてきたらp,qで考えてみてください．</p>
-
-<h3 id="section">今日のポイント</h3>
-<p><strong>pはqであるための~条件</strong>というのは<br />
-<strong>qが成り立つためには，pという条件はどういう役割なのか</strong>ということ</p>
 ]]></content>
   </entry>
   
