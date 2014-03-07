@@ -113,7 +113,98 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/06/reverse/">ケアレミスの防ぎ方（逆戻り法）</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/03/08/substitution/">代入法（ケアレスミスの防ぎ方）</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-08T00:18:48+09:00" pubdate data-updated="true">Mar 8<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今回は計算過程でのケアレスミスを防ぐテクニックその3 <strong>代入法</strong>です．</p>
+
+<p>これは，計算や式変形を行う前と行った後の文字に同じ値を代入し，その時に両方の式が一致するかを確かめる方法です．  </p>
+
+<p>例１</p>
+
+<script type="math/tex; mode=display">
+x^2-3x-28=0\\
+(x-7)(x+4)=0
+</script>
+
+<p>という因数分解の場合，$x=7$を代入すると，下の式の左辺は0になります（等式が成り立つ） ．<br />
+これを上側の式に代入すると$7^2-3\times 7-28=0$となり，同じく0になっています（等式が成り立つ）．</p>
+
+<p>例２</p>
+
+<script type="math/tex; mode=display">
+\sum_{k=1}^{n} k=\frac{n(n+1)}{2}
+</script>
+
+<p>$n=1$を代入すると，左辺は$\sum_{k=1}^{1}=1$，右辺は$\frac{1\times2}{2}=1$となり一致します．</p>
+
+<hr />
+<p>この方法のメリットは<strong>計算が比較的簡単なこと</strong>です．<br />
+ただし，代入する値によって計算の難しさは変わってくるので，できるだけ計算しやすい値を代入するといいと思います．</p>
+
+<p>もうひとつのメリットは<strong>離れた数式でも比較できる</strong>ことです．<br />
+どういうことかというと，$A=B=C=D=E$と変形があった場合，これまでの反復法，逆戻り法では前後の数式同士の比較になっていたのですが，代入法の場合はAとEにそれぞれ代入することで離れた数式でも確認できます．</p>
+
+<p>また，”問題と答え”でも確認が可能です．  </p>
+
+<p>例えば問題文中で$a_1=1$とされている数式の一般解を求める問題で，</p>
+
+<script type="math/tex; mode=display">
+a_n = n^2 -2n + 3
+</script>
+
+<p>と求めたとすると，一般解に$n=1$を代入した時の値は$a_1=2$となるためこの答えは間違っているとわかります．</p>
+
+<p>また，確率の問題でも，$n$を用いた答えの場合には$n=1$などの値を代入することで，確認するといいでしょう．</p>
+
+<hr />
+
+<p>この方法のデメリットは，間違いが見つかるかどうかわからないところです．  </p>
+
+<p>代入した時に一致しなければ間違っていると言えるのですが，一致したからと言って間違えていないとは言えません．<br />
+たまたま代入した値の場合は一致したけれども，他の値の場合には異なっている，ということがありえるからです．</p>
+
+<p>ですが，複数の値を代入することで，”本当は間違っているのに見つけられない”という割合を減らすことができます．<br />
+3種類の値を代入してあっていれば，正しい割合はかなり高くなると思います．</p>
+
+<p>文字を含んだ答えの場合には，3種類の値を代入して確かめる，ということをやってみてください．</p>
+
+<h3 id="section">今日のポイント</h3>
+
+<p><strong>代入法（計算を行う前と行った後の文字に同じ値を代入し，一致するかを確かめる）</strong></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/06/reverse/">逆戻り法（ケアレミスの防ぎ方）</a></h1>
     
     
       <p class="meta">
@@ -157,7 +248,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/03/repeat/">ケアレスミスの防ぎ方（反復法）</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/03/03/repeat/">反復法（ケアレスミスの防ぎ方）</a></h1>
     
     
       <p class="meta">
@@ -548,54 +639,6 @@ $$</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/02/23/solution/">解答とは何を書くべきか？</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-23T23:06:38+09:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>今日も数学（高校数学）の話です．</p>
-
-<p>いきなり質問ですが，みなさん答案用紙には何を書いていますか？<br />
-何を書くべきだと思いますか？</p>
-
-<p>一番多い答えが「途中結果」ではないでしょうか？</p>
-
-<p>しかしそれは間違っていると私は思います．</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/02/23/solution/">続きを読む</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -611,11 +654,15 @@ $$</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/03/06/reverse/">ケアレミスの防ぎ方（逆戻り法）</a>
+        <a href="/blog/2014/03/08/substitution/">代入法（ケアレスミスの防ぎ方）</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/03/03/repeat/">ケアレスミスの防ぎ方（反復法）</a>
+        <a href="/blog/2014/03/06/reverse/">逆戻り法（ケアレミスの防ぎ方）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/03/repeat/">反復法（ケアレスミスの防ぎ方）</a>
       </li>
     
       <li class="post">
@@ -624,10 +671,6 @@ $$</p>
     
       <li class="post">
         <a href="/blog/2014/03/02/hitsuyo-jubun3/">同値を意識する</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/28/hitsuyo-jubun2/">必要×十分=?</a>
       </li>
     
   </ul>
