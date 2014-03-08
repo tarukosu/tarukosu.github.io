@@ -4,7 +4,7 @@
   <title><![CDATA[東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-03-08T22:47:31+09:00</updated>
+  <updated>2014-03-08T22:48:37+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -22,6 +22,8 @@
 
 <p>これは前回説明した代入法とよく似ています．<br />
 代入法では文字にある値を代入して確かめましたが，極限法では文字の極限をとります．</p>
+
+<!-- more -->
 
 <p>例1  </p>
 
