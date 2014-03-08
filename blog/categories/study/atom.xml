@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Study | 東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/blog/categories/study/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-03-08T00:55:34+09:00</updated>
+  <updated>2014-03-08T22:47:31+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -22,11 +22,15 @@
 
 <p>これは，計算や式変形を行う前と行った後の文字に同じ値を代入し，その時に両方の式が一致するかを確かめる方法です．  </p>
 
+<!-- more -->
+
 <p>例１</p>
 
 <script type="math/tex; mode=display">
+
 x^2-3x-28=0\\
 (x-7)(x+4)=0
+
 </script>
 
 <p>という因数分解の場合，$x=7$を代入すると，下の式の左辺は0になります（等式が成り立つ） ．<br />

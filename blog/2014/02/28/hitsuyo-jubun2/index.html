@@ -291,6 +291,10 @@ $x$ が $\cos{x}$に置き換わっているだけでも，誤りは増えてし
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/03/08/limit/">極限法（ケアレスミスの防ぎ方）</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/03/08/substitution/">代入法（ケアレスミスの防ぎ方）</a>
       </li>
     
@@ -304,10 +308,6 @@ $x$ が $\cos{x}$に置き換わっているだけでも，誤りは増えてし
     
       <li class="post">
         <a href="/blog/2014/03/02/careless-mis/">ケアレスミスの防ぎ方</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/02/hitsuyo-jubun3/">同値を意識する</a>
       </li>
     
   </ul>
@@ -378,3 +378,22 @@ $x$ が $\cos{x}$に置き換わっているだけでも，誤りは増えてし
 
 </body>
 </html>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre',
+  'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"
+	type="text/javascript"></script>

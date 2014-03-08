@@ -4,7 +4,7 @@
   <title><![CDATA[東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-03-08T00:55:34+09:00</updated>
+  <updated>2014-03-08T22:47:31+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[極限法（ケアレスミスの防ぎ方）]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/03/08/limit/"/>
+    <updated>2014-03-08T21:34:39+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/03/08/limit</id>
+    <content type="html"><![CDATA[<p>今回は計算過程でのケアレスミスを防ぐテクニックその4 <strong>極限法</strong>です．</p>
+
+<p>これは前回説明した代入法とよく似ています．<br />
+代入法では文字にある値を代入して確かめましたが，極限法では文字の極限をとります．</p>
+
+<p>例1  </p>
+
+<script type="math/tex; mode=display">
+
+x^2-3x-28=0\\
+(x-7)(x+4)=0
+
+</script>
+
+<p>上側の式の左辺を$x\to \infty$とすると左辺 $\to \infty$<br />
+下側の式の左辺も$x\to \infty$とすると左辺 $\to \infty$ となり，一致します．</p>
+
+<p>例2<br />
+1つのさいころを投げ続けて，同じ目が２回連続して出たら終了するものとする．<br />
+r回目以内に終了する確率を求めよ．</p>
+
+<p>求めた答え</p>
+
+<script type="math/tex; mode=display">
+1-(\freq{5}{6})^{r-1}
+</script>
+
+<p>$r\to \infty$とすると求めた答え$\to 1$となる．<br />
+問題文で考えると，ずっと投げ続ければ($r\to \infty$)どこかで同じ目がでて終了するはずなので，確率は1に近づくはずである．
+よって一致する．<br />
+前回の代入法をつかって$r=0, r=1$を代入して確かめると更によい．</p>
+
+<hr />
+<p>この方法のメリットは代入法と同じで，<strong>計算が比較的簡単なこと</strong>，<strong>離れた数式でも比較できる</strong>です．</p>
+
+<p>デメリットも同じで，<strong>間違いが見つかるかどうかわからない</strong>ところです．  </p>
+
+<p>代入法と比べると，極限法は計算がより楽ですが，その分，間違えていても一致するという場合が多くなります．<br />
+例1で考えると7,4が別の数字になっていても，極限の値は一致してしまいます．</p>
+
+<p>そのため，これはあくまでも確認程度のもので，極限が一致した所で正しいという保証はないということを忘れないでください．</p>
+
+<h3 id="section">今日のポイント</h3>
+<p><strong>極限法（文字の極限をとる）</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[代入法（ケアレスミスの防ぎ方）]]></title>
@@ -22,11 +74,15 @@
 
 <p>これは，計算や式変形を行う前と行った後の文字に同じ値を代入し，その時に両方の式が一致するかを確かめる方法です．  </p>
 
+<!-- more -->
+
 <p>例１</p>
 
 <script type="math/tex; mode=display">
+
 x^2-3x-28=0\\
 (x-7)(x+4)=0
+
 </script>
 
 <p>という因数分解の場合，$x=7$を代入すると，下の式の左辺は0になります（等式が成り立つ） ．<br />
