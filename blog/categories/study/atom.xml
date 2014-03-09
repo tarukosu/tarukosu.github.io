@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Study | 東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/blog/categories/study/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-03-09T00:10:48+09:00</updated>
+  <updated>2014-03-09T22:06:40+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[次元法（ケアレスミスの防ぎ方）]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/03/09/dimension/"/>
+    <updated>2014-03-09T21:04:47+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/03/09/dimension</id>
+    <content type="html"><![CDATA[<p>今回は計算過程でのケアレスミスを防ぐテクニックその5 <strong>次元法</strong>です．</p>
+
+<p>これは答えの次元が合っているかを確認する方法です．  </p>
+
+<!-- more -->
+
+<p>例<br />
+「1辺がnの正六角形の面積を求めよ．」<br />
+という問題の場合，答えには $n^2$ が使われるはずです．<br />
+なぜなら， $n$ が2倍になると，面積は4倍になる( $n^2$ に比例する)からです．</p>
+
+<p>そのため，答えが $3n^3$ や $2n$ となっていれば間違いであるとわかります．</p>
+
+<hr />
+
+<p>この方法のメリットは確認が簡単にできることです．<br />
+デメリットは，次元がどうなっていれば正解なのか，というのが感覚的になってしまうことです．そのため，あまり信頼できない確認法となってしまいます．</p>
+
+<hr />
+
+<p>次元法とは話が少し違ってしまいますが，答えが正しい範囲に入っているかということを確かめることは重要です．  </p>
+
+<p>例をいくつか挙げてみます．</p>
+
+<ul>
+  <li>面積  → 正の値になっているか</li>
+  <li>確率  → 0以上1以下になっているか</li>
+  <li>場合の数    → 整数になっているか</li>
+</ul>
+
+<p>確認を行うことで間違いに気づくことができるでしょう．</p>
+
+<h3 id="section">今日のポイント</h3>
+<p><strong>次元法（答えの次元が合っているか確認する）</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[代入法（ケアレスミスの防ぎ方）]]></title>
@@ -211,69 +253,6 @@ x^2-3x-28=0
 
 <h3 id="section">今日のポイント</h3>
 <p><strong>何度も確かめることでケアレスミスを減らす</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[同値を意識する]]></title>
-    <link href="http://tarukosu.github.io/blog/2014/03/02/hitsuyo-jubun3/"/>
-    <updated>2014-03-02T00:16:40+09:00</updated>
-    <id>http://tarukosu.github.io/blog/2014/03/02/hitsuyo-jubun3</id>
-    <content type="html"><![CDATA[<p>前回<strong>解と問題は同値なもの</strong>と説明しました．</p>
-
-<p>今回は問題を解いていく過程で同値を意識すれば，問題が解きやすくなることについて説明しようと思います．</p>
-
-<!-- more -->
-
-<p>問題となる条件をいくつかに分解できる場合があります．</p>
-
-<p>例えば，</p>
-
-<script type="math/tex; mode=display">
-関数~~y=ax^2+bx+c\\
-が~~(0,1), (1,6) ,(2,15)を通る場合，a,b,c の値を求めよ
-</script>
-
-<p>という問題の場合</p>
-
-<script type="math/tex; mode=display">
-ⅰ.~~ y=ax^2+bx+c\\
-ⅱ.~~ x=0,~y=1\\
-ⅲ.~~ x=1,~y=6\\
-ⅳ.~~ x=2,~y=15
-</script>
-
-<p>という4つに分割できます．</p>
-
-<p>この条件の一部を同値なものに変形した場合，元々の条件を考える代わりに変形後の条件を考えれば良くなります．言い換えれば，変形後の条件を考えれば元々の条件を考える必要がなくなる，ということです．</p>
-
-<p>先ほどの例の場合には</p>
-
-<script type="math/tex; mode=display">
-ⅰ.~~ y=ax^2+bx+c\\
-ⅱ.~~ x=0,~y=1\\
-\iff\\
-ⅰ'.~~ y=ax^2+bx+1\\
-ⅱ'.c=1
-</script>
-
-<p>と変形できます．<br />
-このとき，ⅰ,ⅱ,ⅲ,ⅳを考える代わりにⅰ’,ⅱ’,ⅲ,ⅳを考えればよいということです．</p>
-
-<p>ⅰ’,ⅱ’,ⅲ,ⅳに対して，ⅱの条件を考えても意味はありません．ⅰ’に$x=0,~y=1$を代入しても$1=1$となり何も得られません．</p>
-
-<hr />
-
-<p>問題がなかなか解けないときには，すでに使われている条件をもう一度考えてしまうことがよくあります．<br />
-ⅰ’に対してⅱを使おうとしてしまう場合です．</p>
-
-<p>しかしこれは意味のないことで，まだ考慮していない条件を使わなければいけません．<br />
-どの条件と同値なものを考えられているか，ということを意識することで，次はまだ考えていない条件を使って変形をすればよくなるということがわかります．<br />
-そのため，意味のない考えを少なくすることができるので，問題が解きやすくなります．</p>
-
-<h3 id="section">今日のポイント</h3>
-
-<p><strong>条件の一部を同値なものに変形した場合，変形後の条件のみを考えれば良い</strong></p>
 ]]></content>
   </entry>
   

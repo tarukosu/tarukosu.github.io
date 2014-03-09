@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="ja"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>First Commit - 東大院生プログラマの日常</title>
+  <title>次元法（ケアレスミスの防ぎ方） - 東大院生プログラマの日常</title>
 
   <meta name="author" content="tarukosu">
   
@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tarukosu.github.io/blog/2014/02/20/first-commit">
+  <link rel="canonical" href="http://tarukosu.github.io/blog/2014/03/09/dimension">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="東大院生プログラマの日常" type="application/atom+xml">
@@ -115,7 +115,7 @@ src="/javascripts/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   
   <header>
     
-      <h1 class="entry-title">First Commit</h1>
+      <h1 class="entry-title">次元法（ケアレスミスの防ぎ方）</h1>
     
     
       <p class="meta">
@@ -131,92 +131,47 @@ src="/javascripts/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   
 
 
-<time datetime="2014-02-20T19:50:14+09:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time>
+<time datetime="2014-03-09T21:04:47+09:00" pubdate data-updated="true">Mar 9<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>なんだか最近気が緩んでいるなぁと感じていたので，
-ブログを始めてみます．</p>
+<div class="entry-content"><p>今回は計算過程でのケアレスミスを防ぐテクニックその5 <strong>次元法</strong>です．</p>
 
-<p>毎日更新することを目標にして，プログラミングのこと，勉強のこと，思ったことなど自由に書きつづって行こうと思います．</p>
-
-<p>初回のブログはこのブログの作りかたについてです．</p>
-
-<p>gitで管理できて手元のエディタで編集できることから，
-Github と Octpress を使うことにしました．</p>
+<p>これは答えの次元が合っているかを確認する方法です．  </p>
 
 <!-- more -->
 
-<p>導入には<a href="http://blog.glidenote.com/blog/2011/11/07/install-octopress-on-github/">GithubとOctopressでモダンな技術系ブログを作ってみる</a>を参考にさせていただきました．</p>
+<p>例<br />
+「1辺がnの正六角形の面積を求めよ．」<br />
+という問題の場合，答えには $n^2$ が使われるはずです．<br />
+なぜなら， $n$ が2倍になると，面積は4倍になる( $n^2$ に比例する)からです．</p>
+
+<p>そのため，答えが $3n^3$ や $2n$ となっていれば間違いであるとわかります．</p>
 
 <hr />
 
-<p>まずはGithub Pagesを作成しましょう．
-githubで
-<strong>your_name.github.io</strong>
-という名前のレポジトリを作成します．<br />
-私の場合は<strong>tarukosu.github.io</strong>となります．</p>
+<p>この方法のメリットは確認が簡単にできることです．<br />
+デメリットは，次元がどうなっていれば正解なのか，というのが感覚的になってしまうことです．そのため，あまり信頼できない確認法となってしまいます．</p>
 
 <hr />
 
-<p>つぎにoctopressをインストールします．</p>
+<p>次元法とは話が少し違ってしまいますが，答えが正しい範囲に入っているかということを確かめることは重要です．  </p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">git clone git://github.com/imathis/octopress.git octopress
-</span><span class="line">cd octopress
-</span><span class="line">
-</span><span class="line">gem install bundler
-</span><span class="line">bundle install
-</span><span class="line">
-</span><span class="line">rake install</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>rakeというのはmakeのruby版？らしいです．</p>
+<p>例をいくつか挙げてみます．</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">rake setup_github_pages</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>として先程作成したGithub PagesレポジトリのURLを指定し，</p>
+<ul>
+  <li>面積  → 正の値になっているか</li>
+  <li>確率  → 0以上1以下になっているか</li>
+  <li>場合の数    → 整数になっているか</li>
+</ul>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">rake generate
-</span><span class="line">rake deploy</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>とすると，http://user_name.github.io で作成したブログが見れるようになります．<br />
-始めは見れるようになるまで少し時間がかかります．</p>
+<p>確認を行うことで間違いに気づくことができるでしょう．</p>
 
-<p>タイトルなどの設定は<strong>_config.yml</strong>で行えます．</p>
-
-<hr />
-
-<p>記事を作成するときは以下のようにします．</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">rake new_post["title"]
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>すると<strong>/source</strong> 内に新しいファイルができるので，これを編集します．</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">rake gen_deploy</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>とすると，commit が行われてWebページが更新されます．</p>
-
-<hr />
-<p>編集中の記事をプレビューするには</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">rake preview</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>とすると http://localhost:4000 でみることができます．</p>
-
-<hr />
-
-<p>あまり1日目に頑張りすぎると続かないと思うので，今日はこのあたりで終わりにします．<br />
-それではまた</p>
+<h3 id="section">今日のポイント</h3>
+<p><strong>次元法（答えの次元が合っているか確認する）</strong></p>
 </div>
 
 
@@ -239,12 +194,12 @@ githubで
   
 
 
-<time datetime="2014-02-20T19:50:14+09:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time>
+<time datetime="2014-03-09T21:04:47+09:00" pubdate data-updated="true">Mar 9<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/pc/'>PC</a>
+    <a class='category' href='/blog/categories/math/'>math</a>, <a class='category' href='/blog/categories/study/'>study</a>
   
 </span>
 
@@ -253,7 +208,7 @@ githubで
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tarukosu.github.io/blog/2014/02/20/first-commit/" data-via="" data-counturl="http://tarukosu.github.io/blog/2014/02/20/first-commit/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tarukosu.github.io/blog/2014/03/09/dimension/" data-via="" data-counturl="http://tarukosu.github.io/blog/2014/03/09/dimension/" >Tweet</a>
   
   
   
@@ -264,8 +219,8 @@ githubで
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2014/03/08/limit/" title="Previous Post: 極限法（ケアレスミスの防ぎ方）">&laquo; 極限法（ケアレスミスの防ぎ方）</a>
       
-        <a class="basic-alignment right" href="/blog/2014/02/21/math/" title="Next Post: 数学は簡単">数学は簡単 &raquo;</a>
       
     </p>
   </footer>
@@ -331,8 +286,8 @@ githubで
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://tarukosu.github.io/blog/2014/02/20/first-commit/';
-        var disqus_url = 'http://tarukosu.github.io/blog/2014/02/20/first-commit/';
+        var disqus_identifier = 'http://tarukosu.github.io/blog/2014/03/09/dimension/';
+        var disqus_url = 'http://tarukosu.github.io/blog/2014/03/09/dimension/';
         var disqus_script = 'embed.js';
       
     (function () {
