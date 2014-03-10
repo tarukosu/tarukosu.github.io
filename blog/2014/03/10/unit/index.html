@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="ja"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>逆戻り法（ケアレミスの防ぎ方） - 東大院生プログラマの日常</title>
+  <title>単位法（ケアレスミスの防ぎ方） - 東大院生プログラマの日常</title>
 
   <meta name="author" content="tarukosu">
   
@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tarukosu.github.io/blog/2014/03/06/reverse">
+  <link rel="canonical" href="http://tarukosu.github.io/blog/2014/03/10/unit">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="東大院生プログラマの日常" type="application/atom+xml">
@@ -115,7 +115,7 @@ src="/javascripts/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   
   <header>
     
-      <h1 class="entry-title">逆戻り法（ケアレミスの防ぎ方）</h1>
+      <h1 class="entry-title">単位法（ケアレスミスの防ぎ方）</h1>
     
     
       <p class="meta">
@@ -131,64 +131,63 @@ src="/javascripts/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   
 
 
-<time datetime="2014-03-06T21:40:24+09:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+<time datetime="2014-03-10T23:00:50+09:00" pubdate data-updated="true">Mar 10<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>今回は計算過程でのケアレスミスを防ぐテクニックその2，<strong>逆戻り法</strong>です．</p>
+<div class="entry-content"><p>今回でケアレスミスを防ぐテクニックは最終回です．<br />
+テクニックその６ <strong>単位法</strong> を紹介します．</p>
 
-<p>これは，計算や式変形を行った後の式から，計算前・変形前の式に戻すことが出来るか（戻して一致するか）を確かめるという方法です．<br />
-この方法のメリット・デメリットを説明します．</p>
+<p>これは化学や物理でとても役に立つ方法です．<br />
+どういう方法かというと，簡単に言えば単位があっているかを確かめるという方法です．</p>
 
 <!-- more -->
 
-<hr />
+<p>単位には，m(メートル), s(秒), kg(キログラム)など，さまざまなものがあります．<br />
+しかし，値を足し合わせることができるのは，同じ単位をもつ値のみです．<br />
+（1[m] + 1[kg] には意味がない）</p>
 
-<p>メリットは，この方法が使える式であれば<strong>ほぼ確実に間違いを見つけることができる</strong>ことです．<br />
-反復法では2回とも同じ間違いをしてしまうことはしばしばありえますが，逆戻り法では行う計算が異なっているために同じ間違いは起こりにくくなります．    </p>
+<p>そのため，式中で足し算・引き算を行なっている場合，それらが同じ単位でなければ間違っているとわかります．  </p>
 
-<p>もうひとつのメリットは，<strong>計算後から計算前への変形が簡単な場合に，確かめが簡単になる</strong>ことです．<br />
-例えば，因数分解はこのような例です．</p>
-
-<script type="math/tex; mode=display">
-x^2-3x-28=0\\
-(x-7)(x+4)=0
-</script>
-
-<p>という因数分解は，</p>
-
-<script type="math/tex; mode=display">
-(x-7)(x+4)=0\\
-x^2-3x-28=0
-</script>
-
-<p>と展開することにより確かめられます．</p>
-
-<p>また，簡単な引き算も意外と間違えてしまうことがありますが，</p>
-
-<script type="math/tex; mode=display">
-144 - 76 = 68
-</script>
-
-<p>と計算した後で，</p>
-
-<script type="math/tex; mode=display">
-76 + 68 = 144
-</script>
-
-<p>として確認することができます．</p>
+<p>また，答えの値が正しい単位になっているかを確かめる，という確認方法もあります．</p>
 
 <hr />
 
-<p>デメリットは，積分計算や∑の計算などのもとに戻すことの方が難しい計算があるということです．このような場合には，別の方法を使ったほうがよいでしょう．</p>
+<p>しかし，単位を確かめようと思っても，複雑な式になっている場合はどうすれば良いでしょうか？</p>
 
-<p>どのような場合に有効で，どのような場合に役に立たないのかは，いろいろな問題を解いていくなかで試して確かめてみてください．</p>
+<p>例として，以下のような式を考えます．（等加速度運動の公式です）</p>
+
+<script type="math/tex; mode=display">
+x = v_0t+\frac{1}{2}at^2
+</script>
+
+<p>単位 :       $x$ [m],  $v_0$ [m/s], $a$ [m/$s^2$], $t$ [s]</p>
+
+<p>この場合，$v_0t$や$\frac{1}{2}at^2$の単位を知らなくては確認できません．<br />
+実は，掛け算・割り算を行った値の単位は，単位を掛け算・割り算したものになるのです．</p>
+
+<p>$v_0t$の場合は，[m/s] $\times$ [s] = [m]<br />
+$\frac{1}{2}at^2$の場合は， [m/$s^2$] $\times$ [s] $\times$ [s] = [m]<br />
+また，$x$ も [m] なので，すべて揃っていることがわかります．</p>
+
+<hr />
+
+<p>上の例のようにすべて文字になっていればわかりやすいのですが，数字が入っている場合には注意が必要です．<br />
+たとえば，先ほどの式に，$a=2$が代入された場合，</p>
+
+<script type="math/tex; mode=display">
+x = v_0t+t^2
+</script>
+
+<p>となり，$t^2$ の単位が[$s^2$]のように見えてしまうからです．
+そのため，数字が混じっている場合には，数を計算する前，もしくは代入する前に単位を確認することが重要です．</p>
 
 <h3 id="section">今日のポイント</h3>
-<p><strong>逆戻り法（計算後の式から，計算前の式に戻すことが出来るか確かめる）</strong></p>
+<p><strong>単位法（単位があっているかを確かめる）</strong></p>
+
 </div>
 
 
@@ -211,7 +210,7 @@ x^2-3x-28=0
   
 
 
-<time datetime="2014-03-06T21:40:24+09:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+<time datetime="2014-03-10T23:00:50+09:00" pubdate data-updated="true">Mar 10<span>th</span>, 2014</time>
       
 
 <span class="categories">
@@ -225,7 +224,7 @@ x^2-3x-28=0
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tarukosu.github.io/blog/2014/03/06/reverse/" data-via="" data-counturl="http://tarukosu.github.io/blog/2014/03/06/reverse/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tarukosu.github.io/blog/2014/03/10/unit/" data-via="" data-counturl="http://tarukosu.github.io/blog/2014/03/10/unit/" >Tweet</a>
   
   
   
@@ -236,10 +235,8 @@ x^2-3x-28=0
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/03/03/repeat/" title="Previous Post: 反復法（ケアレスミスの防ぎ方）">&laquo; 反復法（ケアレスミスの防ぎ方）</a>
+        <a class="basic-alignment left" href="/blog/2014/03/09/dimension/" title="Previous Post: 次元法（ケアレスミスの防ぎ方）">&laquo; 次元法（ケアレスミスの防ぎ方）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/03/08/substitution/" title="Next Post: 代入法（ケアレスミスの防ぎ方）">代入法（ケアレスミスの防ぎ方） &raquo;</a>
       
     </p>
   </footer>
@@ -305,8 +302,8 @@ x^2-3x-28=0
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://tarukosu.github.io/blog/2014/03/06/reverse/';
-        var disqus_url = 'http://tarukosu.github.io/blog/2014/03/06/reverse/';
+        var disqus_identifier = 'http://tarukosu.github.io/blog/2014/03/10/unit/';
+        var disqus_url = 'http://tarukosu.github.io/blog/2014/03/10/unit/';
         var disqus_script = 'embed.js';
       
     (function () {

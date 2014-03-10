@@ -4,7 +4,7 @@
   <title><![CDATA[東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-03-09T22:06:40+09:00</updated>
+  <updated>2014-03-10T23:43:06+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[単位法（ケアレスミスの防ぎ方）]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/03/10/unit/"/>
+    <updated>2014-03-10T23:00:50+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/03/10/unit</id>
+    <content type="html"><![CDATA[<p>今回でケアレスミスを防ぐテクニックは最終回です．<br />
+テクニックその６ <strong>単位法</strong> を紹介します．</p>
+
+<p>これは化学や物理でとても役に立つ方法です．<br />
+どういう方法かというと，簡単に言えば単位があっているかを確かめるという方法です．</p>
+
+<!-- more -->
+
+<p>単位には，m(メートル), s(秒), kg(キログラム)など，さまざまなものがあります．<br />
+しかし，値を足し合わせることができるのは，同じ単位をもつ値のみです．<br />
+（1[m] + 1[kg] には意味がない）</p>
+
+<p>そのため，式中で足し算・引き算を行なっている場合，それらが同じ単位でなければ間違っているとわかります．  </p>
+
+<p>また，答えの値が正しい単位になっているかを確かめる，という確認方法もあります．</p>
+
+<hr />
+
+<p>しかし，単位を確かめようと思っても，複雑な式になっている場合はどうすれば良いでしょうか？</p>
+
+<p>例として，以下のような式を考えます．（等加速度運動の公式です）</p>
+
+<script type="math/tex; mode=display">
+x = v_0t+\frac{1}{2}at^2
+</script>
+
+<p>単位 :       $x$ [m],  $v_0$ [m/s], $a$ [m/$s^2$], $t$ [s]</p>
+
+<p>この場合，$v_0t$や$\frac{1}{2}at^2$の単位を知らなくては確認できません．<br />
+実は，掛け算・割り算を行った値の単位は，単位を掛け算・割り算したものになるのです．</p>
+
+<p>$v_0t$の場合は，[m/s] $\times$ [s] = [m]<br />
+$\frac{1}{2}at^2$の場合は， [m/$s^2$] $\times$ [s] $\times$ [s] = [m]<br />
+また，$x$ も [m] なので，すべて揃っていることがわかります．</p>
+
+<hr />
+
+<p>上の例のようにすべて文字になっていればわかりやすいのですが，数字が入っている場合には注意が必要です．<br />
+たとえば，先ほどの式に，$a=2$が代入された場合，</p>
+
+<script type="math/tex; mode=display">
+x = v_0t+t^2
+</script>
+
+<p>となり，$t^2$ の単位が[$s^2$]のように見えてしまうからです．
+そのため，数字が混じっている場合には，数を計算する前，もしくは代入する前に単位を確認することが重要です．</p>
+
+<h3 id="section">今日のポイント</h3>
+<p><strong>単位法（単位があっているかを確かめる）</strong></p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[次元法（ケアレスミスの防ぎ方）]]></title>
