@@ -4,7 +4,7 @@
   <title><![CDATA[東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-03-11T19:07:41+09:00</updated>
+  <updated>2014-03-13T00:41:58+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[公式の覚え方]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/03/13/formula/"/>
+    <updated>2014-03-13T00:13:11+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/03/13/formula</id>
+    <content type="html"><![CDATA[<p>数学には「公式」と呼ばれるものがいくつも登場します．<br />
+みなさんはその「式」だけを覚えてしまっていないでしょうか？</p>
+
+<p>公式を覚える際には以下のことが重要です．</p>
+
+<ul>
+  <li>公式の導出過程を覚えること</li>
+  <li>どのような場合に使えるかを覚えること</li>
+</ul>
+
+<!-- more -->
+
+<p>公式の導出過程とは，どのようにしてその公式が導かれるのか，という理由や式変形のことです．<br />
+導出の流れを覚えておけば，公式の式自体は覚えなくても，簡単に導出することができるものがたくさんあります．<br />
+そのため覚える公式を減らすことができます．  </p>
+
+<hr />
+
+<p>どのような場合に使えるか，というのは公式を正しく使うために重要です．<br />
+誤って公式を使い，間違えてしまうというパターンはよくあるのです．</p>
+
+<p>例えば，
+$$
+ax^2 + bx + c = 0
+$$
+の解はなんでしょうか？</p>
+
+<script type="math/tex; mode=display">
+x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
+</script>
+
+<p>であると思った人．そんな人は要注意です．<br />
+なぜなら，これは$a \neq 0$の時の解だからです．</p>
+
+<p>このような間違いを防ぐために，公式を覚える時，使う場合にはそれがどのような場合に使えるのかということを意識してください．</p>
+
+<h3 id="section">今日のポイント</h3>
+<p><strong>公式は導出過程とどのような場合に使えるかを覚える</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[論理のミスの防ぎ方]]></title>

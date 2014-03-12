@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Math | 東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/blog/categories/math/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-03-11T19:07:41+09:00</updated>
+  <updated>2014-03-13T00:41:58+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[公式の覚え方]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/03/13/formula/"/>
+    <updated>2014-03-13T00:13:11+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/03/13/formula</id>
+    <content type="html"><![CDATA[<p>数学には「公式」と呼ばれるものがいくつも登場します．<br />
+みなさんはその「式」だけを覚えてしまっていないでしょうか？</p>
+
+<p>公式を覚える際には以下のことが重要です．</p>
+
+<ul>
+  <li>公式の導出過程を覚えること</li>
+  <li>どのような場合に使えるかを覚えること</li>
+</ul>
+
+<!-- more -->
+
+<p>公式の導出過程とは，どのようにしてその公式が導かれるのか，という理由や式変形のことです．<br />
+導出の流れを覚えておけば，公式の式自体は覚えなくても，簡単に導出することができるものがたくさんあります．<br />
+そのため覚える公式を減らすことができます．  </p>
+
+<hr />
+
+<p>どのような場合に使えるか，というのは公式を正しく使うために重要です．<br />
+誤って公式を使い，間違えてしまうというパターンはよくあるのです．</p>
+
+<p>例えば，
+$$
+ax^2 + bx + c = 0
+$$
+の解はなんでしょうか？</p>
+
+<script type="math/tex; mode=display">
+x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
+</script>
+
+<p>であると思った人．そんな人は要注意です．<br />
+なぜなら，これは$a \neq 0$の時の解だからです．</p>
+
+<p>このような間違いを防ぐために，公式を覚える時，使う場合にはそれがどのような場合に使えるのかということを意識してください．</p>
+
+<h3 id="section">今日のポイント</h3>
+<p><strong>公式は導出過程とどのような場合に使えるかを覚える</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[論理のミスの防ぎ方]]></title>
@@ -208,74 +254,6 @@ $r\to \infty$とすると求めた答え$\to 1$となる．<br />
 
 <h3 id="section">今日のポイント</h3>
 <p><strong>極限法（文字の極限をとる）</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[代入法（ケアレスミスの防ぎ方）]]></title>
-    <link href="http://tarukosu.github.io/blog/2014/03/08/substitution/"/>
-    <updated>2014-03-08T00:18:48+09:00</updated>
-    <id>http://tarukosu.github.io/blog/2014/03/08/substitution</id>
-    <content type="html"><![CDATA[<p>今回は計算過程でのケアレスミスを防ぐテクニックその3 <strong>代入法</strong>です．</p>
-
-<p>これは，計算や式変形を行う前と行った後の文字に同じ値を代入し，その時に両方の式が一致するかを確かめる方法です．  </p>
-
-<!-- more -->
-
-<p>例１</p>
-
-<script type="math/tex; mode=display">
-
-x^2-3x-28=0\\
-(x-7)(x+4)=0
-
-</script>
-
-<p>という因数分解の場合，$x=7$を代入すると，下の式の左辺は0になります（等式が成り立つ） ．<br />
-これを上側の式に代入すると$7^2-3\times 7-28=0$となり，同じく0になっています（等式が成り立つ）．</p>
-
-<p>例２</p>
-
-<script type="math/tex; mode=display">
-\sum_{k=1}^{n} k=\frac{n(n+1)}{2}
-</script>
-
-<p>$n=1$を代入すると，左辺は$\sum_{k=1}^{1}=1$，右辺は$\frac{1\times2}{2}=1$となり一致します．</p>
-
-<hr />
-<p>この方法のメリットは<strong>計算が比較的簡単なこと</strong>です．<br />
-ただし，代入する値によって計算の難しさは変わってくるので，できるだけ計算しやすい値を代入するといいと思います．</p>
-
-<p>もうひとつのメリットは<strong>離れた数式でも比較できる</strong>ことです．<br />
-どういうことかというと，$A=B=C=D=E$と変形があった場合，これまでの反復法，逆戻り法では前後の数式同士の比較になっていたのですが，代入法の場合はAとEにそれぞれ代入することで離れた数式でも確認できます．</p>
-
-<p>また，”問題と答え”でも確認が可能です．  </p>
-
-<p>例えば問題文中で$a_1=1$とされている数式の一般解を求める問題で，</p>
-
-<script type="math/tex; mode=display">
-a_n = n^2 -2n + 3
-</script>
-
-<p>と求めたとすると，一般解に$n=1$を代入した時の値は$a_1=2$となるためこの答えは間違っているとわかります．</p>
-
-<p>また，確率の問題でも，$n$を用いた答えの場合には$n=1$などの値を代入することで，確認するといいでしょう．</p>
-
-<hr />
-
-<p>この方法のデメリットは，間違いが見つかるかどうかわからないところです．  </p>
-
-<p>代入した時に一致しなければ間違っていると言えるのですが，一致したからと言って間違えていないとは言えません．<br />
-たまたま代入した値の場合は一致したけれども，他の値の場合には異なっている，ということがありえるからです．</p>
-
-<p>ですが，複数の値を代入することで，”本当は間違っているのに見つけられない”という割合を減らすことができます．<br />
-3種類の値を代入してあっていれば，正しい割合はかなり高くなると思います．</p>
-
-<p>文字を含んだ答えの場合には，3種類の値を代入して確かめる，ということをやってみてください．</p>
-
-<h3 id="section">今日のポイント</h3>
-
-<p><strong>代入法（計算を行う前と行った後の文字に同じ値を代入し，一致するかを確かめる）</strong></p>
 ]]></content>
   </entry>
   

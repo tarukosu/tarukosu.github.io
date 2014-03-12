@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Study | 東大院生プログラマの日常]]></title>
   <link href="http://tarukosu.github.io/blog/categories/study/atom.xml" rel="self"/>
   <link href="http://tarukosu.github.io/"/>
-  <updated>2014-03-11T19:07:41+09:00</updated>
+  <updated>2014-03-13T00:41:58+09:00</updated>
   <id>http://tarukosu.github.io/</id>
   <author>
     <name><![CDATA[tarukosu]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[公式の覚え方]]></title>
+    <link href="http://tarukosu.github.io/blog/2014/03/13/formula/"/>
+    <updated>2014-03-13T00:13:11+09:00</updated>
+    <id>http://tarukosu.github.io/blog/2014/03/13/formula</id>
+    <content type="html"><![CDATA[<p>数学には「公式」と呼ばれるものがいくつも登場します．<br />
+みなさんはその「式」だけを覚えてしまっていないでしょうか？</p>
+
+<p>公式を覚える際には以下のことが重要です．</p>
+
+<ul>
+  <li>公式の導出過程を覚えること</li>
+  <li>どのような場合に使えるかを覚えること</li>
+</ul>
+
+<!-- more -->
+
+<p>公式の導出過程とは，どのようにしてその公式が導かれるのか，という理由や式変形のことです．<br />
+導出の流れを覚えておけば，公式の式自体は覚えなくても，簡単に導出することができるものがたくさんあります．<br />
+そのため覚える公式を減らすことができます．  </p>
+
+<hr />
+
+<p>どのような場合に使えるか，というのは公式を正しく使うために重要です．<br />
+誤って公式を使い，間違えてしまうというパターンはよくあるのです．</p>
+
+<p>例えば，
+$$
+ax^2 + bx + c = 0
+$$
+の解はなんでしょうか？</p>
+
+<script type="math/tex; mode=display">
+x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
+</script>
+
+<p>であると思った人．そんな人は要注意です．<br />
+なぜなら，これは$a \neq 0$の時の解だからです．</p>
+
+<p>このような間違いを防ぐために，公式を覚える時，使う場合にはそれがどのような場合に使えるのかということを意識してください．</p>
+
+<h3 id="section">今日のポイント</h3>
+<p><strong>公式は導出過程とどのような場合に使えるかを覚える</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[論理のミスの防ぎ方]]></title>
@@ -218,65 +264,6 @@ a_n = n^2 -2n + 3
 <h3 id="section">今日のポイント</h3>
 
 <p><strong>代入法（計算を行う前と行った後の文字に同じ値を代入し，一致するかを確かめる）</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[逆戻り法（ケアレミスの防ぎ方）]]></title>
-    <link href="http://tarukosu.github.io/blog/2014/03/06/reverse/"/>
-    <updated>2014-03-06T21:40:24+09:00</updated>
-    <id>http://tarukosu.github.io/blog/2014/03/06/reverse</id>
-    <content type="html"><![CDATA[<p>今回は計算過程でのケアレスミスを防ぐテクニックその2，<strong>逆戻り法</strong>です．</p>
-
-<p>これは，計算や式変形を行った後の式から，計算前・変形前の式に戻すことが出来るか（戻して一致するか）を確かめるという方法です．<br />
-この方法のメリット・デメリットを説明します．</p>
-
-<!-- more -->
-
-<hr />
-
-<p>メリットは，この方法が使える式であれば<strong>ほぼ確実に間違いを見つけることができる</strong>ことです．<br />
-反復法では2回とも同じ間違いをしてしまうことはしばしばありえますが，逆戻り法では行う計算が異なっているために同じ間違いは起こりにくくなります．    </p>
-
-<p>もうひとつのメリットは，<strong>計算後から計算前への変形が簡単な場合に，確かめが簡単になる</strong>ことです．<br />
-例えば，因数分解はこのような例です．</p>
-
-<script type="math/tex; mode=display">
-x^2-3x-28=0\\
-(x-7)(x+4)=0
-</script>
-
-<p>という因数分解は，</p>
-
-<script type="math/tex; mode=display">
-(x-7)(x+4)=0\\
-x^2-3x-28=0
-</script>
-
-<p>と展開することにより確かめられます．</p>
-
-<p>また，簡単な引き算も意外と間違えてしまうことがありますが，</p>
-
-<script type="math/tex; mode=display">
-144 - 76 = 68
-</script>
-
-<p>と計算した後で，</p>
-
-<script type="math/tex; mode=display">
-76 + 68 = 144
-</script>
-
-<p>として確認することができます．</p>
-
-<hr />
-
-<p>デメリットは，積分計算や∑の計算などのもとに戻すことの方が難しい計算があるということです．このような場合には，別の方法を使ったほうがよいでしょう．</p>
-
-<p>どのような場合に有効で，どのような場合に役に立たないのかは，いろいろな問題を解いていくなかで試して確かめてみてください．</p>
-
-<h3 id="section">今日のポイント</h3>
-<p><strong>逆戻り法（計算後の式から，計算前の式に戻すことが出来るか確かめる）</strong></p>
 ]]></content>
   </entry>
   

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="ja"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>極限法（ケアレスミスの防ぎ方） - 東大院生プログラマの日常</title>
+  <title>公式の覚え方 - 東大院生プログラマの日常</title>
 
   <meta name="author" content="tarukosu">
   
@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tarukosu.github.io/blog/2014/03/08/limit">
+  <link rel="canonical" href="http://tarukosu.github.io/blog/2014/03/13/formula">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="東大院生プログラマの日常" type="application/atom+xml">
@@ -115,7 +115,7 @@ src="/javascripts/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   
   <header>
     
-      <h1 class="entry-title">極限法（ケアレスミスの防ぎ方）</h1>
+      <h1 class="entry-title">公式の覚え方</h1>
     
     
       <p class="meta">
@@ -131,63 +131,51 @@ src="/javascripts/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   
 
 
-<time datetime="2014-03-08T21:34:39+09:00" pubdate data-updated="true">Mar 8<span>th</span>, 2014</time>
+<time datetime="2014-03-13T00:13:11+09:00" pubdate data-updated="true">Mar 13<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>今回は計算過程でのケアレスミスを防ぐテクニックその4 <strong>極限法</strong>です．</p>
+<div class="entry-content"><p>数学には「公式」と呼ばれるものがいくつも登場します．<br />
+みなさんはその「式」だけを覚えてしまっていないでしょうか？</p>
 
-<p>これは前回説明した代入法とよく似ています．<br />
-代入法では文字にある値を代入して確かめましたが，極限法では文字の極限をとります．</p>
+<p>公式を覚える際には以下のことが重要です．</p>
+
+<ul>
+  <li>公式の導出過程を覚えること</li>
+  <li>どのような場合に使えるかを覚えること</li>
+</ul>
 
 <!-- more -->
 
-<p>例1  </p>
-
-<script type="math/tex; mode=display">
-
-x^2-3x-28=0\\
-(x-7)(x+4)=0
-
-</script>
-
-<p>上側の式の左辺を$x\to \infty$とすると左辺 $\to \infty$<br />
-下側の式の左辺も$x\to \infty$とすると左辺 $\to \infty$ となり，一致します．</p>
+<p>公式の導出過程とは，どのようにしてその公式が導かれるのか，という理由や式変形のことです．<br />
+導出の流れを覚えておけば，公式の式自体は覚えなくても，簡単に導出することができるものがたくさんあります．<br />
+そのため覚える公式を減らすことができます．  </p>
 
 <hr />
-<p>例2</p>
 
-<p><strong>問</strong><br />
-1つのさいころを投げ続けて，同じ目が２回連続して出たら終了するものとする．<br />
-r回目以内に終了する確率を求めよ．</p>
+<p>どのような場合に使えるか，というのは公式を正しく使うために重要です．<br />
+誤って公式を使い，間違えてしまうというパターンはよくあるのです．</p>
 
-<p><strong>求めた答え</strong></p>
+<p>例えば，
+$$
+ax^2 + bx + c = 0
+$$
+の解はなんでしょうか？</p>
 
 <script type="math/tex; mode=display">
-1-\left( \frac{5}{6} \right)^{r-1}
+x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
 </script>
 
-<p><strong>確認</strong><br />
-$r\to \infty$とすると求めた答え$\to 1$となる．<br />
-問題文で考えると，ずっと投げ続ければ($r\to \infty$)どこかで同じ目がでて終了するはずなので，確率は1に近づくはずである．
-よって一致する．<br />
-前回の代入法をつかって$r=0, r=1$を代入して確かめると更によい．</p>
+<p>であると思った人．そんな人は要注意です．<br />
+なぜなら，これは$a \neq 0$の時の解だからです．</p>
 
-<hr />
-<p>この方法のメリットは代入法と同じで，<strong>計算が比較的簡単なこと</strong>，<strong>離れた数式でも比較できること</strong>です．</p>
-
-<p>デメリットも同じで，<strong>間違いが見つかるかどうかわからない</strong>ところです．  </p>
-
-<p>代入法と比べると，極限法は計算がより楽ですが，その分，間違えていても一致するという場合が多くなります．<br />
-例1で考えると7,4が別の数字になっていても，極限の値は一致してしまいます．</p>
-
-<p>そのため，これはあくまでも確認程度のもので，極限が一致した所で正しいという保証はないということを忘れないでください．</p>
+<p>このような間違いを防ぐために，公式を覚える時，使う場合にはそれがどのような場合に使えるのかということを意識してください．</p>
 
 <h3 id="section">今日のポイント</h3>
-<p><strong>極限法（文字の極限をとる）</strong></p>
+<p><strong>公式は導出過程とどのような場合に使えるかを覚える</strong></p>
 </div>
 
 
@@ -210,12 +198,12 @@ $r\to \infty$とすると求めた答え$\to 1$となる．<br />
   
 
 
-<time datetime="2014-03-08T21:34:39+09:00" pubdate data-updated="true">Mar 8<span>th</span>, 2014</time>
+<time datetime="2014-03-13T00:13:11+09:00" pubdate data-updated="true">Mar 13<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/math/'>math</a>, <a class='category' href='/blog/categories/syudy/'>syudy</a>
+    <a class='category' href='/blog/categories/math/'>math</a>, <a class='category' href='/blog/categories/study/'>study</a>
   
 </span>
 
@@ -224,7 +212,7 @@ $r\to \infty$とすると求めた答え$\to 1$となる．<br />
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tarukosu.github.io/blog/2014/03/08/limit/" data-via="" data-counturl="http://tarukosu.github.io/blog/2014/03/08/limit/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tarukosu.github.io/blog/2014/03/13/formula/" data-via="" data-counturl="http://tarukosu.github.io/blog/2014/03/13/formula/" >Tweet</a>
   
   
   
@@ -235,10 +223,8 @@ $r\to \infty$とすると求めた答え$\to 1$となる．<br />
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/03/08/substitution/" title="Previous Post: 代入法（ケアレスミスの防ぎ方）">&laquo; 代入法（ケアレスミスの防ぎ方）</a>
+        <a class="basic-alignment left" href="/blog/2014/03/11/logic/" title="Previous Post: 論理のミスの防ぎ方">&laquo; 論理のミスの防ぎ方</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/03/09/dimension/" title="Next Post: 次元法（ケアレスミスの防ぎ方）">次元法（ケアレスミスの防ぎ方） &raquo;</a>
       
     </p>
   </footer>
@@ -304,8 +290,8 @@ $r\to \infty$とすると求めた答え$\to 1$となる．<br />
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://tarukosu.github.io/blog/2014/03/08/limit/';
-        var disqus_url = 'http://tarukosu.github.io/blog/2014/03/08/limit/';
+        var disqus_identifier = 'http://tarukosu.github.io/blog/2014/03/13/formula/';
+        var disqus_url = 'http://tarukosu.github.io/blog/2014/03/13/formula/';
         var disqus_script = 'embed.js';
       
     (function () {
